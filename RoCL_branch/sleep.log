@@ -313,3 +313,43 @@
 
 	Job terminated of its own accord at 2022-01-06T00:07:04Z with exit-code 1.
 ...
+000 (4295.000.000) 2022-01-06 01:21:06 Job submitted from host: <134.96.227.101:9618?addrs=134.96.227.101-9618&alias=conduit2.cs.uni-saarland.de&noUDP&sock=schedd_1282_ec81>
+...
+040 (4295.000.000) 2022-01-06 01:21:07 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_759321>
+...
+040 (4295.000.000) 2022-01-06 01:21:12 Finished transferring input files
+...
+001 (4295.000.000) 2022-01-06 01:21:13 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (4295.000.000) 2022-01-06 01:21:22 Image size of job updated: 556
+	556  -  MemoryUsage of job (MB)
+	570360  -  ResidentSetSize of job (KB)
+...
+006 (4295.000.000) 2022-01-06 01:21:36 Image size of job updated: 2186
+	2186  -  MemoryUsage of job (MB)
+	2238664  -  ResidentSetSize of job (KB)
+...
+040 (4295.000.000) 2022-01-06 01:21:36 Started transferring output files
+...
+040 (4295.000.000) 2022-01-06 01:21:36 Finished transferring output files
+...
+005 (4295.000.000) 2022-01-06 01:21:36 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:15, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:15, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	9375  -  Run Bytes Sent By Job
+	220743216  -  Run Bytes Received By Job
+	9375  -  Total Bytes Sent By Job
+	220743216  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.01        1         7 
+	   Disk (KB)            : 563988      225000 402881726 
+	   Gpus (Average)       :      0                     1 "GPU-5d3dd972"
+	   GpusMemory (MB)      :      7                       
+	   Memory (MB)          :   2186           1     64484 
+
+	Job terminated of its own accord at 2022-01-06T00:21:36Z with exit-code 1.
+...
