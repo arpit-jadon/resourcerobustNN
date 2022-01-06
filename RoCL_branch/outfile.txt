@@ -1,0 +1,76 @@
+module           : False
+lamda            : 256
+regularize_to    : other
+attack_to        : other
+loss_type        : sim
+advtrain_type    : Rep
+train_type       : contrastive
+lr               : 0.1
+lr_multiplier    : 15.0
+decay            : 1e-06
+dataset          : cifar-10
+load_checkpoint  : ./checkpoint/ckpt.t7one_task_0
+resume           : False
+model            : ResNet18
+name             : 
+seed             : 0
+batch_size       : 256
+epoch            : 1000
+color_jitter_strength : 0.5
+temperature      : 0.5
+local_rank       : 1
+ngpu             : 2
+min              : 0.0
+max              : 1.0
+attack_type      : linf
+epsilon          : 0.0314
+alpha            : 0.007
+k                : 7
+random_start     : True
+module           : False
+lamda            : 256
+regularize_to    : other
+attack_to        : other
+loss_type        : sim
+advtrain_type    : Rep
+train_type       : contrastive
+lr               : 0.1
+lr_multiplier    : 15.0
+decay            : 1e-06
+dataset          : cifar-10
+load_checkpoint  : ./checkpoint/ckpt.t7one_task_0
+resume           : False
+model            : ResNet18
+name             : 
+seed             : 0
+batch_size       : 256
+epoch            : 1000
+color_jitter_strength : 0.5
+temperature      : 0.5
+local_rank       : 0
+ngpu             : 2
+min              : 0.0
+max              : 1.0
+attack_type      : linf
+epsilon          : 0.0314
+alpha            : 0.007
+k                : 7
+random_start     : True
+==> Preparing data..
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./Data/cifar-10-python.tar.gz
+==> Preparing data..
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./Data/cifar-10-python.tar.gz
+Extracting ./Data/cifar-10-python.tar.gz to ./Data
+Extracting ./Data/cifar-10-python.tar.gz to ./Data
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+==> Building model..
+ResNet18 is loading ...
+Representation attack info ...
+Rep_attack_ep_0.0314_alpha_0.007_min_val_0.0_max_val_1.0_max_iters_7_type_linf_randomstart_True
+ResNet18 is loading ...
+Representation attack info ...
+Rep_attack_ep_0.0314_alpha_0.007_min_val_0.0_max_val_1.0_max_iters_7_type_linf_randomstart_True
+Killing subprocess 10
+Killing subprocess 11
