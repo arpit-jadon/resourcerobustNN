@@ -1,0 +1,7 @@
+python 3.6+
+torch 1.1+
+torchvision 0.3+
+CUDA 10.1+
+torchlars == 0.1.2
+pytorch-gradual-warmup-lr packages
+diffdist == 0.1
