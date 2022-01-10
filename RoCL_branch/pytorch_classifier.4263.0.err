@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "./condor_exec.exe", line 19, in <module>
-    from utils import progress_bar, checkpoint, AverageMeter, accuracy
-  File "/raid/condor/lib/condor/execute/dir_2911112/utils.py", line 18, in <module>
-    import scipy.misc
-ModuleNotFoundError: No module named 'scipy'

@@ -22,12 +22,9 @@ from loss import pairwise_similarity, NT_xent
 from torchlars import LARS
 from warmup_scheduler import GradualWarmupScheduler
 
-<<<<<<< HEAD
 os.environ['MASTER_ADDR'] = 'localhost'
 os.environ['MASTER_PORT'] = '29500'
 
-=======
->>>>>>> 58030bf7b819f23bab6771b40b0e185e62f68982
 args = parser()
 
 def print_status(string):
