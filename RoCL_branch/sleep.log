@@ -668,3 +668,60 @@
 ...
 009 (6731.000.000) 2022-01-10 23:47:01 Job was aborted.
 ...
+000 (6733.000.000) 2022-01-11 00:03:38 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6733.000.000) 2022-01-11 00:03:39 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching1_3543_1d29_842438>
+...
+040 (6733.000.000) 2022-01-11 00:03:41 Finished transferring input files
+...
+001 (6733.000.000) 2022-01-11 00:03:42 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+004 (6733.000.000) 2022-01-11 00:03:44 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	148780352  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :        0        1         7 
+	   Disk (KB)            :   145312   150000 402881726 
+	   Gpus (Average)       :        0                  1 "GPU-0833fde1"
+	   GpusMemory (MB)      :        7                    
+	   Memory (MB)          :                 1     64484 
+...
+009 (6733.000.000) 2022-01-11 00:03:44 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+...
+000 (6734.000.000) 2022-01-11 00:03:52 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6734.000.000) 2022-01-11 00:03:59 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=interactive5_3543_1d29_842443>
+...
+040 (6734.000.000) 2022-01-11 00:04:02 Finished transferring input files
+...
+001 (6734.000.000) 2022-01-11 00:04:03 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6734.000.000) 2022-01-11 00:04:11 Image size of job updated: 67364
+	2  -  MemoryUsage of job (MB)
+	1928  -  ResidentSetSize of job (KB)
+...
+006 (6734.000.000) 2022-01-11 00:25:07 Image size of job updated: 67364
+	2400  -  MemoryUsage of job (MB)
+	2457824  -  ResidentSetSize of job (KB)
+...
+004 (6734.000.000) 2022-01-11 00:25:07 Job was evicted.
+	(0) CPU times
+		Usr 0 00:06:29, Sys 0 00:00:11  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	148780016  -  Run Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.00        1         1 
+	   Disk (KB)            : 638677      150000 402881726 
+	   Gpus (Average)       :      0.22                  1 "GPU-35441559"
+	   GpusMemory (MB)      :   9452                       
+	   Memory (MB)          :   2400           2     64484 
+...
+009 (6734.000.000) 2022-01-11 00:25:07 Job was aborted.
+...

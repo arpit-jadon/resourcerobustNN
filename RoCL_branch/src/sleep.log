@@ -1,0 +1,17 @@
+000 (6732.000.000) 2022-01-10 23:56:04 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6732.000.000) 2022-01-10 23:56:12 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=interactive5_3543_1d29_842348>
+...
+007 (6732.000.000) 2022-01-10 23:56:14 Shadow exception!
+	Error from interactive5@uller.cs.uni-saarland.de: SHADOW at 134.96.227.100 failed to send file(s) to <134.96.224.230:34499>: error reading from /home/mlcysec_team002/Project_MLCysec/RoCL_branch/src/Data/: (errno 2) No such file or directory; STARTER failed to receive file(s) from <134.96.227.100:9618>
+	0  -  Run Bytes Sent By Job
+	148478096  -  Run Bytes Received By Job
+...
+012 (6732.000.000) 2022-01-10 23:56:14 Job was held.
+	Error from interactive5@uller.cs.uni-saarland.de: SHADOW at 134.96.227.100 failed to send file(s) to <134.96.224.230:34499>: error reading from /home/mlcysec_team002/Project_MLCysec/RoCL_branch/src/Data/: (errno 2) No such file or directory; STARTER failed to receive file(s) from <134.96.227.100:9618>
+	Code 13 Subcode 2
+...
+009 (6732.000.000) 2022-01-11 00:01:44 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+...
