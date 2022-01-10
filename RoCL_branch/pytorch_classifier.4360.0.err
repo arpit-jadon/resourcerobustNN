@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./condor_exec.exe", line 47, in <module>
+    torch.distributed.init_process_group(
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 500, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/rendezvous.py", line 177, in _env_rendezvous_handler
+    raise _env_error("MASTER_ADDR")
+ValueError: Error initializing torch.distributed using env:// rendezvous: environment variable MASTER_ADDR expected, but not set

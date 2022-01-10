@@ -1,5 +1,0 @@
-009 (4282.000.000) 2022-01-06 00:01:54 Job was aborted.
-	via condor_rm (by user mlcysec_team002)
-
-	Job terminated by itself at 2022-01-05T22:54:58Z (using method 0: OF_ITS_OWN_ACCORD).
-...
