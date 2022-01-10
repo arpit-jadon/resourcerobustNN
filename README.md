@@ -48,7 +48,9 @@ condor_ssh_to_job -ssh sftp <job_id>
 
 ## HYDRA    
 
-### Executing core
+There three parts (steps) in HYDRA method. We have to uncomment and run each part sequentially (due to condor).
+
+### Executing code
 1. Place the command in `executable_cmd.sh`
 2. Update `docker.sub` according to the requirements.
 3. Run: `condor_submit docker.sub` (include `-i` flag for interactive mode) 
