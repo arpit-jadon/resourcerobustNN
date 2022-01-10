@@ -1,0 +1,131 @@
+Namespace(arch='resnet18', batch_size=256, beta=6.0, clip_max=1, clip_min=0, configs='configs/configs.yml', const_init=False, data_dir='./datasets', data_fraction=1.0, dataset='CIFAR10', distance='l_inf', epochs=1, epsilon=0.031, evaluate=False, exp_mode='prune', exp_name='temp', freeze_bn=False, gpu='0', image_dim=32, init_type='kaiming_normal', is_semisup=False, k=0.1, layer_type='subnet', lr=0.1, lr_schedule='cosine', mean=(0, 0, 0), mixtraink=1, momentum=0.9, n_repeats=4, no_cuda=False, noise_std=0.25, normalize=False, num_classes=10, num_steps=10, optimizer='sgd', print_freq=100, result_dir='./trained_models', resume='', save_dense=True, scale_rand_init=False, scaled_score_init=True, schedule_length=0, scores_init_type=None, seed=1234, semisup_data='tinyimages', semisup_fraction=1.0, snip_init=False, source_net='./trained_models/temp/pretrain/latest_exp/checkpoint/checkpoint.pth.tar', start_epoch=0, std=(1, 1, 1), step_size=0.0078, test_batch_size=256, trainer='adv', val_method='adv', warmup_epochs=0, warmup_lr=0.1, wd=0.0001)
+ResNet(
+  (conv1): SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): SubnetLinear(in_features=512, out_features=10, bias=True)
+)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "train.py", line 294, in <module>
+    main()
+  File "train.py", line 133, in main
+    logger.info(args.dataset, D, len(train_loader.dataset), len(test_loader.dataset))
+Message: 'CIFAR10'
+Arguments: (<data.cifar.CIFAR10 object at 0x7fdbdbcc7e80>, 50000, 10000)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "train.py", line 294, in <module>
+    main()
+  File "train.py", line 133, in main
+    logger.info(args.dataset, D, len(train_loader.dataset), len(test_loader.dataset))
+Message: 'CIFAR10'
+Arguments: (<data.cifar.CIFAR10 object at 0x7fdbdbcc7e80>, 50000, 10000)
+[CrossEntropyLoss(), SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 0.1
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0001
+), <function cosine_schedule.<locals>.set_lr at 0x7fdbd0424160>]
+=> loading source model from './trained_models/temp/pretrain/latest_exp/checkpoint/checkpoint.pth.tar'
+=> loaded checkpoint './trained_models/temp/pretrain/latest_exp/checkpoint/checkpoint.pth.tar'
+Validation accuracy adv for source-net: 10.0
+/opt/conda/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Epoch 0, val-method adv, validation accuracy 19.369998931884766, best_prec 19.369998931884766
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
