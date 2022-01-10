@@ -1,0 +1,16 @@
+universe                = docker
+docker_image            =  manuelaceron/hlcv2021:version1.0
+executable              = src/rocl_train.py
+transfer_input_files = src/ , Data/ , /home/mlcysec_team002/.local/lib/python3.6/site-packages/diffdist, /home/mlcysec_team002/.local/lib/python3.6/site-packages/cv2, /home/mlcysec_team002/.local/lib/python3.6/site-packages/opencv_contrib_python_headless.libs, /home/mlcysec_team002/Git_RoCL/torchlars/
+transfer_output_files = ./Data/
+output                  = pytorch_classifier.$(ClusterId).$(ProcId).out
+error                   = pytorch_classifier.$(ClusterId).$(ProcId).err
+log                     = pytorch_classifier.$(ClusterId).log
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+request_GPUs = 1
+request_CPUs = 1
+request_memory = 1G
+requirements = UidDomain == "cs.uni-saarland.de" 
++WantGPUHomeMounted = true
+queue 1

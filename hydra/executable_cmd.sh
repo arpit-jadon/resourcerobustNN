@@ -1,4 +1,4 @@
-python train.py --is-semisup --arch resnet18 --exp-mode pretrain --configs configs/configs.yml\
+python train.py --arch resnet18 --exp-mode pretrain --configs configs/configs.yml\
     --trainer adv --val_method adv --k 1.0  --epochs 20 --save-dense;
 
 << SKIP

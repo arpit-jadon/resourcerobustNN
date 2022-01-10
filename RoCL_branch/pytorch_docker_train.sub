@@ -1,0 +1,11 @@
+# sleep.sub -- simple sleep job
+universe                = docker
+docker_image            =  manuelaceron/hlcv2021:version1.0
+executable              = sleep.sh
+transfer_input_files = src/ , Data/ , /home/mlcysec_team002/.local/lib/python3.6/site-packages/diffdist, /home/mlcysec_team002/.local/lib/python3.6/site-packages/cv2, /home/mlcysec_team002/.local/lib/python3.6/site-packages/opencv_contrib_python_headless.libs, /home/mlcysec_team002/Git_RoCL/torchlars/
+log                     = sleep.log
+output                  = outfile.txt
+error                   = errors.txt
+should_transfer_files   = Yes
+when_to_transfer_output = ON_EXIT
+queue
