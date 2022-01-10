@@ -63,7 +63,7 @@ else:
 
 # Model
 print_status('==> Building model..')
-torch.cuda.set_device(0)
+torch.cuda.set_device(args.local_rank)
 model = model_loader.get_model(args)
 
 if args.model=='ResNet18':
