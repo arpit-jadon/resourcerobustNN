@@ -33,9 +33,12 @@ class BasicBlock(nn.Module):
             )
 
     def forward(self, x):
-        out = F.relu(self.bn1(self.conv1(x)))
-        out = self.bn2(self.conv2(out))
-        out += self.shortcut(x)
+     #out = F.relu(self.bn1(self.conv1(x)))
+        #temp = self.conv2(out)
+        #out = self.bn2(temp)
+        #out = out + self.shortcut(x)
+        out = self.conv1(x)
+        out = self.conv2(out)
         out = F.relu(out)
         return out
 
@@ -154,7 +157,7 @@ class ResNet(nn.Module):
         out_list = []
         
         out = self.conv1(out)
-        out = self.bn1(out)
+         #out = self.bn1(out)
         out = F.relu(out)
         out_list.append(out)
         

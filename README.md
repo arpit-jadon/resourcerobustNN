@@ -29,13 +29,17 @@ sudo docker tag mlcysec-docker nik1806/mlcysec:1.0
 ```
 sudo docker push nik1806/mlcysec:1.0
 ```
-### 6. Go to job location
+
+## Create an ssh session to a running job
+Useful commands
+
+### 1. Go to job location
 ```
 condor_ssh_to_job <job_id>
 ...
 logout
 ```
-### 7. Fetch files from job location
+### 2. Fetch files from job location
 ```
 condor_ssh_to_job -ssh sftp <job_id>
 ```
