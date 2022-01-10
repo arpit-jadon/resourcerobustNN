@@ -95,3 +95,4 @@ def train(
                 "training-images",
                 torchvision.utils.make_grid(images[0 : len(images) // 4]),
             )
+
