@@ -1,0 +1,233 @@
+=> Reading YAML config from configs/configs.yml
+#################### Pruning network ####################
+===>>  gradient for weights: None  | training importance scores only
+Initialization relevance score with None initialization
+Files already downloaded and verified
+Files already downloaded and verified
+Traing loader: 50000 images, Test loader: 10000 images
+Initialization relevance score proportional to weight magnitudes (OVERWRITING SOURCE NET SCORES)
+Test: [39/40]	Time  0.543 ( 2.307)	Loss 2.6512 (2.4906)	Adv_Loss 2.6823 (2.5221)	Acc_1  18.75 ( 14.21)	Acc_5  56.25 ( 50.00)	Adv-Acc_1  18.75 ( 12.42)	Adv-Acc_5  56.25 ( 50.00)
+variable = conv1.weight, Gradient requires_grad = False
+variable = conv1.popup_scores, Gradient requires_grad = True
+variable = bn1.weight, Gradient requires_grad = True
+variable = bn1.bias, Gradient requires_grad = True
+variable = layer1.0.conv1.weight, Gradient requires_grad = False
+variable = layer1.0.conv1.popup_scores, Gradient requires_grad = True
+variable = layer1.0.bn1.weight, Gradient requires_grad = True
+variable = layer1.0.bn1.bias, Gradient requires_grad = True
+variable = layer1.0.conv2.weight, Gradient requires_grad = False
+variable = layer1.0.conv2.popup_scores, Gradient requires_grad = True
+variable = layer1.0.bn2.weight, Gradient requires_grad = True
+variable = layer1.0.bn2.bias, Gradient requires_grad = True
+variable = layer1.1.conv1.weight, Gradient requires_grad = False
+variable = layer1.1.conv1.popup_scores, Gradient requires_grad = True
+variable = layer1.1.bn1.weight, Gradient requires_grad = True
+variable = layer1.1.bn1.bias, Gradient requires_grad = True
+variable = layer1.1.conv2.weight, Gradient requires_grad = False
+variable = layer1.1.conv2.popup_scores, Gradient requires_grad = True
+variable = layer1.1.bn2.weight, Gradient requires_grad = True
+variable = layer1.1.bn2.bias, Gradient requires_grad = True
+variable = layer2.0.conv1.weight, Gradient requires_grad = False
+variable = layer2.0.conv1.popup_scores, Gradient requires_grad = True
+variable = layer2.0.bn1.weight, Gradient requires_grad = True
+variable = layer2.0.bn1.bias, Gradient requires_grad = True
+variable = layer2.0.conv2.weight, Gradient requires_grad = False
+variable = layer2.0.conv2.popup_scores, Gradient requires_grad = True
+variable = layer2.0.bn2.weight, Gradient requires_grad = True
+variable = layer2.0.bn2.bias, Gradient requires_grad = True
+variable = layer2.0.shortcut.0.weight, Gradient requires_grad = False
+variable = layer2.0.shortcut.0.popup_scores, Gradient requires_grad = True
+variable = layer2.0.shortcut.1.weight, Gradient requires_grad = True
+variable = layer2.0.shortcut.1.bias, Gradient requires_grad = True
+variable = layer2.1.conv1.weight, Gradient requires_grad = False
+variable = layer2.1.conv1.popup_scores, Gradient requires_grad = True
+variable = layer2.1.bn1.weight, Gradient requires_grad = True
+variable = layer2.1.bn1.bias, Gradient requires_grad = True
+variable = layer2.1.conv2.weight, Gradient requires_grad = False
+variable = layer2.1.conv2.popup_scores, Gradient requires_grad = True
+variable = layer2.1.bn2.weight, Gradient requires_grad = True
+variable = layer2.1.bn2.bias, Gradient requires_grad = True
+variable = layer3.0.conv1.weight, Gradient requires_grad = False
+variable = layer3.0.conv1.popup_scores, Gradient requires_grad = True
+variable = layer3.0.bn1.weight, Gradient requires_grad = True
+variable = layer3.0.bn1.bias, Gradient requires_grad = True
+variable = layer3.0.conv2.weight, Gradient requires_grad = False
+variable = layer3.0.conv2.popup_scores, Gradient requires_grad = True
+variable = layer3.0.bn2.weight, Gradient requires_grad = True
+variable = layer3.0.bn2.bias, Gradient requires_grad = True
+variable = layer3.0.shortcut.0.weight, Gradient requires_grad = False
+variable = layer3.0.shortcut.0.popup_scores, Gradient requires_grad = True
+variable = layer3.0.shortcut.1.weight, Gradient requires_grad = True
+variable = layer3.0.shortcut.1.bias, Gradient requires_grad = True
+variable = layer3.1.conv1.weight, Gradient requires_grad = False
+variable = layer3.1.conv1.popup_scores, Gradient requires_grad = True
+variable = layer3.1.bn1.weight, Gradient requires_grad = True
+variable = layer3.1.bn1.bias, Gradient requires_grad = True
+variable = layer3.1.conv2.weight, Gradient requires_grad = False
+variable = layer3.1.conv2.popup_scores, Gradient requires_grad = True
+variable = layer3.1.bn2.weight, Gradient requires_grad = True
+variable = layer3.1.bn2.bias, Gradient requires_grad = True
+variable = layer4.0.conv1.weight, Gradient requires_grad = False
+variable = layer4.0.conv1.popup_scores, Gradient requires_grad = True
+variable = layer4.0.bn1.weight, Gradient requires_grad = True
+variable = layer4.0.bn1.bias, Gradient requires_grad = True
+variable = layer4.0.conv2.weight, Gradient requires_grad = False
+variable = layer4.0.conv2.popup_scores, Gradient requires_grad = True
+variable = layer4.0.bn2.weight, Gradient requires_grad = True
+variable = layer4.0.bn2.bias, Gradient requires_grad = True
+variable = layer4.0.shortcut.0.weight, Gradient requires_grad = False
+variable = layer4.0.shortcut.0.popup_scores, Gradient requires_grad = True
+variable = layer4.0.shortcut.1.weight, Gradient requires_grad = True
+variable = layer4.0.shortcut.1.bias, Gradient requires_grad = True
+variable = layer4.1.conv1.weight, Gradient requires_grad = False
+variable = layer4.1.conv1.popup_scores, Gradient requires_grad = True
+variable = layer4.1.bn1.weight, Gradient requires_grad = True
+variable = layer4.1.bn1.bias, Gradient requires_grad = True
+variable = layer4.1.conv2.weight, Gradient requires_grad = False
+variable = layer4.1.conv2.popup_scores, Gradient requires_grad = True
+variable = layer4.1.bn2.weight, Gradient requires_grad = True
+variable = layer4.1.bn2.bias, Gradient requires_grad = True
+variable = linear.weight, Gradient requires_grad = False
+variable = linear.bias, Gradient requires_grad = False
+variable = linear.popup_scores, Gradient requires_grad = True
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.09938
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [0][  0/196]	Time  3.492 ( 3.492)	Data  0.000 ( 0.000)	Loss 1.7304 (1.7304)	Acc_1  48.83 ( 48.83)	Acc_5  89.45 ( 89.45)
+Epoch: [0][100/196]	Time  3.676 ( 3.677)	Data  0.000 ( 0.000)	Loss 1.5373 (1.5618)	Acc_1  62.11 ( 59.17)	Acc_5  96.88 ( 95.70)
+Test: [39/40]	Time  0.536 ( 2.300)	Loss 1.1027 (1.2563)	Adv_Loss 1.5572 (1.7412)	Acc_1  62.50 ( 62.15)	Acc_5 100.00 ( 96.24)	Adv-Acc_1  31.25 ( 34.66)	Adv-Acc_5  93.75 ( 85.97)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.10000
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [1][  0/196]	Time  3.488 ( 3.488)	Data  0.000 ( 0.000)	Loss 1.5185 (1.5185)	Acc_1  57.42 ( 57.42)	Acc_5  96.09 ( 96.09)
+Epoch: [1][100/196]	Time  3.677 ( 3.676)	Data  0.000 ( 0.000)	Loss 1.3647 (1.4825)	Acc_1  66.02 ( 63.92)	Acc_5  97.27 ( 96.51)
+Test: [39/40]	Time  0.533 ( 2.300)	Loss 1.0944 (1.2267)	Adv_Loss 1.5077 (1.7105)	Acc_1  62.50 ( 63.07)	Acc_5 100.00 ( 96.42)	Adv-Acc_1  37.50 ( 35.68)	Adv-Acc_5  93.75 ( 86.15)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.09938
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [2][  0/196]	Time  3.441 ( 3.441)	Data  0.000 ( 0.000)	Loss 1.5065 (1.5065)	Acc_1  60.16 ( 60.16)	Acc_5  97.27 ( 97.27)
+Epoch: [2][100/196]	Time  3.676 ( 3.675)	Data  0.000 ( 0.000)	Loss 1.5033 (1.4658)	Acc_1  58.59 ( 64.69)	Acc_5  96.88 ( 96.64)
+Test: [39/40]	Time  0.533 ( 2.300)	Loss 0.9444 (1.2109)	Adv_Loss 1.3738 (1.7439)	Acc_1  75.00 ( 62.35)	Acc_5 100.00 ( 96.26)	Adv-Acc_1  31.25 ( 34.42)	Adv-Acc_5  93.75 ( 85.04)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.09755
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [3][  0/196]	Time  3.484 ( 3.484)	Data  0.000 ( 0.000)	Loss 1.3796 (1.3796)	Acc_1  67.58 ( 67.58)	Acc_5  97.27 ( 97.27)
+Epoch: [3][100/196]	Time  3.678 ( 3.676)	Data  0.000 ( 0.000)	Loss 1.4768 (1.4507)	Acc_1  62.89 ( 65.84)	Acc_5  95.31 ( 96.72)
+Test: [39/40]	Time  0.532 ( 2.301)	Loss 0.9671 (1.1724)	Adv_Loss 1.4039 (1.6823)	Acc_1  75.00 ( 65.03)	Acc_5 100.00 ( 96.66)	Adv-Acc_1  25.00 ( 36.65)	Adv-Acc_5  93.75 ( 86.99)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.09455
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [4][  0/196]	Time  3.439 ( 3.439)	Data  0.000 ( 0.000)	Loss 1.4337 (1.4337)	Acc_1  68.75 ( 68.75)	Acc_5  96.48 ( 96.48)
+Epoch: [4][100/196]	Time  3.675 ( 3.674)	Data  0.000 ( 0.000)	Loss 1.4782 (1.4479)	Acc_1  60.94 ( 66.39)	Acc_5  94.53 ( 96.90)
+Test: [39/40]	Time  0.534 ( 2.299)	Loss 0.9357 (1.2157)	Adv_Loss 1.3346 (1.7306)	Acc_1  68.75 ( 64.17)	Acc_5 100.00 ( 95.96)	Adv-Acc_1  37.50 ( 35.05)	Adv-Acc_5 100.00 ( 84.86)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.09045
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [5][  0/196]	Time  3.469 ( 3.469)	Data  0.000 ( 0.000)	Loss 1.3453 (1.3453)	Acc_1  70.31 ( 70.31)	Acc_5  99.61 ( 99.61)
+Epoch: [5][100/196]	Time  3.679 ( 3.675)	Data  0.000 ( 0.000)	Loss 1.5690 (1.4248)	Acc_1  60.94 ( 66.75)	Acc_5  96.09 ( 97.05)
+Test: [39/40]	Time  0.531 ( 2.300)	Loss 1.0487 (1.1917)	Adv_Loss 1.5091 (1.6820)	Acc_1  68.75 ( 66.49)	Acc_5 100.00 ( 96.61)	Adv-Acc_1  31.25 ( 37.17)	Adv-Acc_5  93.75 ( 86.96)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.08536
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [6][  0/196]	Time  3.477 ( 3.477)	Data  0.000 ( 0.000)	Loss 1.3789 (1.3789)	Acc_1  70.70 ( 70.70)	Acc_5  97.27 ( 97.27)
+Epoch: [6][100/196]	Time  3.674 ( 3.673)	Data  0.000 ( 0.000)	Loss 1.5236 (1.4259)	Acc_1  65.23 ( 67.47)	Acc_5  95.31 ( 97.08)
+Test: [39/40]	Time  0.530 ( 2.298)	Loss 0.9532 (1.2159)	Adv_Loss 1.3641 (1.7343)	Acc_1  62.50 ( 60.69)	Acc_5 100.00 ( 96.39)	Adv-Acc_1  37.50 ( 34.21)	Adv-Acc_5  93.75 ( 86.88)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.07939
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [7][  0/196]	Time  3.475 ( 3.475)	Data  0.000 ( 0.000)	Loss 1.4319 (1.4319)	Acc_1  62.89 ( 62.89)	Acc_5  96.48 ( 96.48)
+Epoch: [7][100/196]	Time  3.675 ( 3.672)	Data  0.000 ( 0.000)	Loss 1.4424 (1.4231)	Acc_1  64.84 ( 66.96)	Acc_5  98.05 ( 97.15)
+Test: [39/40]	Time  0.529 ( 2.298)	Loss 0.9518 (1.1485)	Adv_Loss 1.3707 (1.6476)	Acc_1  81.25 ( 66.94)	Acc_5 100.00 ( 97.13)	Adv-Acc_1  31.25 ( 37.91)	Adv-Acc_5 100.00 ( 87.72)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.07270
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [8][  0/196]	Time  3.442 ( 3.442)	Data  0.000 ( 0.000)	Loss 1.4429 (1.4429)	Acc_1  67.58 ( 67.58)	Acc_5  98.05 ( 98.05)
+Epoch: [8][100/196]	Time  3.675 ( 3.673)	Data  0.000 ( 0.000)	Loss 1.3880 (1.4192)	Acc_1  75.00 ( 67.94)	Acc_5  97.27 ( 97.18)
+Test: [39/40]	Time  0.530 ( 2.298)	Loss 1.0155 (1.1645)	Adv_Loss 1.4911 (1.6790)	Acc_1  75.00 ( 65.73)	Acc_5 100.00 ( 96.62)	Adv-Acc_1  25.00 ( 36.64)	Adv-Acc_5  93.75 ( 87.33)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.06545
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [9][  0/196]	Time  3.475 ( 3.475)	Data  0.000 ( 0.000)	Loss 1.4258 (1.4258)	Acc_1  67.19 ( 67.19)	Acc_5  98.83 ( 98.83)
+Epoch: [9][100/196]	Time  3.675 ( 3.673)	Data  0.000 ( 0.000)	Loss 1.4590 (1.4087)	Acc_1  65.62 ( 68.38)	Acc_5  96.88 ( 97.27)
+Test: [39/40]	Time  0.529 ( 2.298)	Loss 1.0187 (1.1915)	Adv_Loss 1.4330 (1.6676)	Acc_1  68.75 ( 66.09)	Acc_5 100.00 ( 96.60)	Adv-Acc_1  43.75 ( 37.78)	Adv-Acc_5  93.75 ( 87.79)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.05782
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [10][  0/196]	Time  3.491 ( 3.491)	Data  0.000 ( 0.000)	Loss 1.3154 (1.3154)	Acc_1  71.09 ( 71.09)	Acc_5  98.05 ( 98.05)
+Epoch: [10][100/196]	Time  3.677 ( 3.676)	Data  0.000 ( 0.000)	Loss 1.3819 (1.4071)	Acc_1  68.36 ( 68.29)	Acc_5  97.66 ( 97.25)
+Test: [39/40]	Time  0.532 ( 2.300)	Loss 1.0714 (1.2171)	Adv_Loss 1.5316 (1.7119)	Acc_1  68.75 ( 64.88)	Acc_5 100.00 ( 96.24)	Adv-Acc_1  25.00 ( 36.43)	Adv-Acc_5  93.75 ( 86.57)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.05000
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [11][  0/196]	Time  3.451 ( 3.451)	Data  0.000 ( 0.000)	Loss 1.4023 (1.4023)	Acc_1  66.41 ( 66.41)	Acc_5  97.27 ( 97.27)
+Epoch: [11][100/196]	Time  3.680 ( 3.676)	Data  0.000 ( 0.000)	Loss 1.3350 (1.3986)	Acc_1  71.88 ( 68.99)	Acc_5  98.44 ( 97.28)
+Test: [39/40]	Time  0.533 ( 2.301)	Loss 1.0292 (1.1791)	Adv_Loss 1.4786 (1.6635)	Acc_1  75.00 ( 66.95)	Acc_5 100.00 ( 96.74)	Adv-Acc_1  25.00 ( 37.98)	Adv-Acc_5 100.00 ( 87.60)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.04218
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [12][  0/196]	Time  3.481 ( 3.481)	Data  0.000 ( 0.000)	Loss 1.4237 (1.4237)	Acc_1  70.70 ( 70.70)	Acc_5  96.48 ( 96.48)
+Epoch: [12][100/196]	Time  3.676 ( 3.677)	Data  0.000 ( 0.000)	Loss 1.3847 (1.3902)	Acc_1  67.58 ( 69.33)	Acc_5  97.66 ( 97.34)
+Test: [39/40]	Time  0.532 ( 2.300)	Loss 0.8668 (1.1545)	Adv_Loss 1.2990 (1.6994)	Acc_1  62.50 ( 64.48)	Acc_5 100.00 ( 96.50)	Adv-Acc_1  50.00 ( 35.80)	Adv-Acc_5  93.75 ( 86.12)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.03455
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [13][  0/196]	Time  3.448 ( 3.448)	Data  0.000 ( 0.000)	Loss 1.3305 (1.3305)	Acc_1  71.48 ( 71.48)	Acc_5  98.44 ( 98.44)
+Epoch: [13][100/196]	Time  3.674 ( 3.676)	Data  0.000 ( 0.000)	Loss 1.4672 (1.3879)	Acc_1  60.94 ( 69.31)	Acc_5  97.27 ( 97.56)
+Test: [39/40]	Time  0.528 ( 2.299)	Loss 0.9860 (1.1579)	Adv_Loss 1.4238 (1.6396)	Acc_1  75.00 ( 67.06)	Acc_5 100.00 ( 96.78)	Adv-Acc_1  50.00 ( 39.27)	Adv-Acc_5  93.75 ( 87.94)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.02730
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [14][  0/196]	Time  3.484 ( 3.484)	Data  0.000 ( 0.000)	Loss 1.4390 (1.4390)	Acc_1  62.89 ( 62.89)	Acc_5  94.92 ( 94.92)
+Epoch: [14][100/196]	Time  3.672 ( 3.677)	Data  0.000 ( 0.000)	Loss 1.3433 (1.3877)	Acc_1  72.66 ( 69.60)	Acc_5  97.66 ( 97.42)
+Test: [39/40]	Time  0.538 ( 2.298)	Loss 0.8722 (1.1323)	Adv_Loss 1.3048 (1.6500)	Acc_1  75.00 ( 67.38)	Acc_5 100.00 ( 96.76)	Adv-Acc_1  37.50 ( 37.91)	Adv-Acc_5 100.00 ( 87.06)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.02061
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [15][  0/196]	Time  3.446 ( 3.446)	Data  0.000 ( 0.000)	Loss 1.3291 (1.3291)	Acc_1  73.05 ( 73.05)	Acc_5  98.05 ( 98.05)
+Epoch: [15][100/196]	Time  3.679 ( 3.674)	Data  0.000 ( 0.000)	Loss 1.3660 (1.3809)	Acc_1  70.31 ( 69.85)	Acc_5  96.88 ( 97.57)
+Test: [39/40]	Time  0.530 ( 2.298)	Loss 0.9010 (1.1580)	Adv_Loss 1.3149 (1.6672)	Acc_1  75.00 ( 66.17)	Acc_5 100.00 ( 96.81)	Adv-Acc_1  31.25 ( 37.50)	Adv-Acc_5 100.00 ( 87.34)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.01464
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [16][  0/196]	Time  3.483 ( 3.483)	Data  0.000 ( 0.000)	Loss 1.3410 (1.3410)	Acc_1  75.78 ( 75.78)	Acc_5  97.66 ( 97.66)
+Epoch: [16][100/196]	Time  3.677 ( 3.674)	Data  0.000 ( 0.000)	Loss 1.4204 (1.3761)	Acc_1  67.58 ( 70.05)	Acc_5  96.88 ( 97.57)
+Test: [39/40]	Time  0.538 ( 2.298)	Loss 0.9484 (1.1307)	Adv_Loss 1.3782 (1.6334)	Acc_1  81.25 ( 67.47)	Acc_5 100.00 ( 97.28)	Adv-Acc_1  25.00 ( 38.41)	Adv-Acc_5  93.75 ( 88.66)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.00955
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [17][  0/196]	Time  3.456 ( 3.456)	Data  0.000 ( 0.000)	Loss 1.3650 (1.3650)	Acc_1  70.31 ( 70.31)	Acc_5  98.44 ( 98.44)
+Epoch: [17][100/196]	Time  3.671 ( 3.673)	Data  0.000 ( 0.000)	Loss 1.3811 (1.3763)	Acc_1  73.44 ( 70.27)	Acc_5  98.44 ( 97.76)
+Test: [39/40]	Time  0.531 ( 2.298)	Loss 1.0731 (1.1844)	Adv_Loss 1.5337 (1.6865)	Acc_1  81.25 ( 64.80)	Acc_5 100.00 ( 96.42)	Adv-Acc_1  37.50 ( 37.35)	Adv-Acc_5  93.75 ( 86.79)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.00545
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [18][  0/196]	Time  3.479 ( 3.479)	Data  0.000 ( 0.000)	Loss 1.3243 (1.3243)	Acc_1  72.66 ( 72.66)	Acc_5  98.83 ( 98.83)
+Epoch: [18][100/196]	Time  3.688 ( 3.674)	Data  0.000 ( 0.000)	Loss 1.3949 (1.3674)	Acc_1  69.53 ( 70.72)	Acc_5  97.27 ( 97.63)
+Test: [39/40]	Time  0.541 ( 2.321)	Loss 0.8894 (1.1065)	Adv_Loss 1.3214 (1.6225)	Acc_1  75.00 ( 69.44)	Acc_5 100.00 ( 97.30)	Adv-Acc_1  43.75 ( 39.02)	Adv-Acc_5 100.00 ( 87.79)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.00245
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [19][  0/196]	Time  3.499 ( 3.499)	Data  0.000 ( 0.000)	Loss 1.4878 (1.4878)	Acc_1  68.75 ( 68.75)	Acc_5  96.88 ( 96.88)
+Epoch: [19][100/196]	Time  3.680 ( 3.681)	Data  0.000 ( 0.000)	Loss 1.3872 (1.3717)	Acc_1  69.53 ( 70.89)	Acc_5  97.27 ( 97.73)
+Test: [39/40]	Time  0.532 ( 2.299)	Loss 0.9522 (1.1415)	Adv_Loss 1.3705 (1.6302)	Acc_1  68.75 ( 67.90)	Acc_5 100.00 ( 97.05)	Adv-Acc_1  50.00 ( 38.91)	Adv-Acc_5  93.75 ( 88.64)
+conv1 SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.98842592592592
+layer1.0.conv1 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99837239583333
+layer1.0.conv2 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99837239583333
+layer1.1.conv1 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99837239583333
+layer1.1.conv2 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99837239583333
+layer2.0.conv1 SubnetConv(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False) 89.99972873263889
+layer2.0.conv2 SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99972873263889
+layer2.0.shortcut.0 SubnetConv(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False) 89.990234375
+layer2.1.conv1 SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99972873263889
+layer2.1.conv2 SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99972873263889
+layer3.0.conv1 SubnetConv(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False) 89.99972873263889
+layer3.0.conv2 SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99989827473958
+layer3.0.shortcut.0 SubnetConv(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False) 89.9993896484375
+layer3.1.conv1 SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99989827473958
+layer3.1.conv2 SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99989827473958
+layer4.0.conv1 SubnetConv(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False) 89.99998304578993
+layer4.0.conv2 SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99998304578993
+layer4.0.shortcut.0 SubnetConv(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False) 89.9993896484375
+layer4.1.conv1 SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99998304578993
+layer4.1.conv2 SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 89.99998304578993
+linear SubnetLinear(in_features=512, out_features=10, bias=True) 90.0
