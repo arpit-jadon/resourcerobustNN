@@ -1,0 +1,165 @@
+Namespace(arch='resnet18', batch_size=256, beta=6.0, clip_max=1, clip_min=0, configs='configs/configs.yml', const_init=False, data_dir='./datasets', data_fraction=1.0, dataset='CIFAR10', distance='l_inf', epochs=20, epsilon=0.031, evaluate=False, exp_mode='pretrain', exp_name='res18_adv', freeze_bn=False, gpu='0', image_dim=32, init_type='kaiming_normal', is_semisup=False, k=1.0, layer_type='subnet', lr=0.1, lr_schedule='cosine', mean=(0, 0, 0), mixtraink=1, momentum=0.9, n_repeats=4, no_cuda=False, noise_std=0.25, normalize=False, num_classes=10, num_steps=10, optimizer='sgd', print_freq=100, result_dir='./trained_models', resume='', save_dense=True, scale_rand_init=False, scaled_score_init=False, schedule_length=0, scores_init_type=None, seed=1234, semisup_data='tinyimages', semisup_fraction=1.0, snip_init=False, source_net='', start_epoch=0, std=(1, 1, 1), step_size=0.0078, test_batch_size=256, trainer='adv', val_method='adv', warmup_epochs=0, warmup_lr=0.1, wd=0.0001)
+ResNet(
+  (conv1): SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): SubnetLinear(in_features=512, out_features=10, bias=True)
+)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "train.py", line 294, in <module>
+    main()
+  File "train.py", line 133, in main
+    logger.info(args.dataset, D, len(train_loader.dataset), len(test_loader.dataset))
+Message: 'CIFAR10'
+Arguments: (<data.cifar.CIFAR10 object at 0x7f1fe8ad2df0>, 50000, 10000)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/opt/conda/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "train.py", line 294, in <module>
+    main()
+  File "train.py", line 133, in main
+    logger.info(args.dataset, D, len(train_loader.dataset), len(test_loader.dataset))
+Message: 'CIFAR10'
+Arguments: (<data.cifar.CIFAR10 object at 0x7f1fe8ad2df0>, 50000, 10000)
+[CrossEntropyLoss(), SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 0.1
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0001
+), <function cosine_schedule.<locals>.set_lr at 0x7f1fe11ed160>]
+/opt/conda/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Epoch 0, val-method adv, validation accuracy 20.459999084472656, best_prec 20.459999084472656
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 1, val-method adv, validation accuracy 23.60999870300293, best_prec 23.60999870300293
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 2, val-method adv, validation accuracy 26.079999923706055, best_prec 26.079999923706055
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 3, val-method adv, validation accuracy 27.34000015258789, best_prec 27.34000015258789
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 4, val-method adv, validation accuracy 27.809999465942383, best_prec 27.809999465942383
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 5, val-method adv, validation accuracy 29.939998626708984, best_prec 29.939998626708984
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 6, val-method adv, validation accuracy 30.439998626708984, best_prec 30.439998626708984
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 7, val-method adv, validation accuracy 32.23999786376953, best_prec 32.23999786376953
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 8, val-method adv, validation accuracy 33.38999938964844, best_prec 33.38999938964844
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 9, val-method adv, validation accuracy 32.91999816894531, best_prec 33.38999938964844
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 10, val-method adv, validation accuracy 34.43000030517578, best_prec 34.43000030517578
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 11, val-method adv, validation accuracy 35.849998474121094, best_prec 35.849998474121094
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 12, val-method adv, validation accuracy 36.31999969482422, best_prec 36.31999969482422
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 13, val-method adv, validation accuracy 36.959999084472656, best_prec 36.959999084472656
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 14, val-method adv, validation accuracy 38.0, best_prec 38.0
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 15, val-method adv, validation accuracy 38.45000076293945, best_prec 38.45000076293945
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 16, val-method adv, validation accuracy 39.20000076293945, best_prec 39.20000076293945
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 17, val-method adv, validation accuracy 38.93000030517578, best_prec 39.20000076293945
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 18, val-method adv, validation accuracy 39.5, best_prec 39.5
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 19, val-method adv, validation accuracy 40.54999923706055, best_prec 40.54999923706055
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
