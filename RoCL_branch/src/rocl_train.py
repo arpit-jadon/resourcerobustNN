@@ -94,12 +94,14 @@ model       = torch.nn.parallel.DistributedDataParallel(
                 device_ids=[args.local_rank],
                 output_device=args.local_rank,
                 find_unused_parameters=True,
+                broadcast_buffers=False
 )
 projector   = torch.nn.parallel.DistributedDataParallel(
                 projector,
                 device_ids=[args.local_rank],
                 output_device=args.local_rank,
                 find_unused_parameters=True,
+                broadcast_buffers=False
 )
 
 cudnn.benchmark = True
