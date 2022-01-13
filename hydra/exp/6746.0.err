@@ -1,4 +1,4 @@
-Namespace(arch='resnet18', batch_size=256, beta=6.0, clip_max=1, clip_min=0, configs='configs/configs.yml', const_init=False, data_dir='./datasets', data_fraction=1.0, dataset='CIFAR10', distance='l_inf', epochs=20, epsilon=0.031, evaluate=False, exp_mode='prune', exp_name='temp', freeze_bn=False, gpu='0', image_dim=32, init_type='kaiming_normal', is_semisup=False, k=0.1, layer_type='subnet', lr=0.1, lr_schedule='cosine', mean=(0, 0, 0), mixtraink=1, momentum=0.9, n_repeats=4, no_cuda=False, noise_std=0.25, normalize=False, num_classes=10, num_steps=10, optimizer='sgd', print_freq=100, result_dir='./trained_models', resume='', save_dense=True, scale_rand_init=False, scaled_score_init=True, schedule_length=0, scores_init_type=None, seed=1234, semisup_data='tinyimages', semisup_fraction=1.0, snip_init=False, source_net='./trained_models/res18_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar', start_epoch=0, std=(1, 1, 1), step_size=0.0078, test_batch_size=256, trainer='adv', val_method='adv', warmup_epochs=0, warmup_lr=0.1, wd=0.0001)
+Namespace(arch='resnet18', batch_size=256, beta=6.0, clip_max=1, clip_min=0, configs='configs/configs.yml', const_init=False, data_dir='./datasets', data_fraction=1.0, dataset='CIFAR10', distance='l_inf', epochs=20, epsilon=0.031, evaluate=False, exp_mode='finetune', exp_name='res18_adv', freeze_bn=False, gpu='0', image_dim=32, init_type='kaiming_normal', is_semisup=False, k=0.1, layer_type='subnet', lr=0.01, lr_schedule='cosine', mean=(0, 0, 0), mixtraink=1, momentum=0.9, n_repeats=4, no_cuda=False, noise_std=0.25, normalize=False, num_classes=10, num_steps=10, optimizer='sgd', print_freq=100, result_dir='./trained_models', resume='', save_dense=True, scale_rand_init=False, scaled_score_init=False, schedule_length=0, scores_init_type=None, seed=1234, semisup_data='tinyimages', semisup_fraction=1.0, snip_init=False, source_net='./trained_models/res18_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar', start_epoch=0, std=(1, 1, 1), step_size=0.0078, test_batch_size=256, trainer='adv', val_method='adv', warmup_epochs=0, warmup_lr=0.1, wd=0.0001)
 ResNet(
   (conv1): SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
   (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
@@ -94,7 +94,7 @@ Call stack:
   File "train.py", line 133, in main
     logger.info(args.dataset, D, len(train_loader.dataset), len(test_loader.dataset))
 Message: 'CIFAR10'
-Arguments: (<data.cifar.CIFAR10 object at 0x7f6d9b82edf0>, 50000, 10000)
+Arguments: (<data.cifar.CIFAR10 object at 0x7fe762fece20>, 50000, 10000)
 --- Logging error ---
 Traceback (most recent call last):
   File "/opt/conda/lib/python3.8/logging/__init__.py", line 1081, in emit
@@ -112,77 +112,77 @@ Call stack:
   File "train.py", line 133, in main
     logger.info(args.dataset, D, len(train_loader.dataset), len(test_loader.dataset))
 Message: 'CIFAR10'
-Arguments: (<data.cifar.CIFAR10 object at 0x7f6d9b82edf0>, 50000, 10000)
+Arguments: (<data.cifar.CIFAR10 object at 0x7fe762fece20>, 50000, 10000)
 [CrossEntropyLoss(), SGD (
 Parameter Group 0
     dampening: 0
-    lr: 0.1
+    lr: 0.01
     momentum: 0.9
     nesterov: False
     weight_decay: 0.0001
-), <function cosine_schedule.<locals>.set_lr at 0x7f6d93f48160>]
-=> loading source model from './trained_models/res18_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar'
-=> loaded checkpoint './trained_models/res18_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar'
-Validation accuracy adv for source-net: 12.420000076293945
+), <function cosine_schedule.<locals>.set_lr at 0x7fe7536c40d0>]
+=> loading source model from './trained_models/res18_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar'
+=> loaded checkpoint './trained_models/res18_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar'
+Validation accuracy adv for source-net: 39.02000045776367
 /opt/conda/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
   warnings.warn(warning.format(ret))
-Epoch 0, val-method adv, validation accuracy 34.65999984741211, best_prec 34.65999984741211
+Epoch 0, val-method adv, validation accuracy 40.96999740600586, best_prec 40.96999740600586
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 1, val-method adv, validation accuracy 35.68000030517578, best_prec 35.68000030517578
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 1, val-method adv, validation accuracy 40.65999984741211, best_prec 40.96999740600586
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 2, val-method adv, validation accuracy 34.41999816894531, best_prec 35.68000030517578
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 2, val-method adv, validation accuracy 40.41999816894531, best_prec 40.96999740600586
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 3, val-method adv, validation accuracy 36.64999771118164, best_prec 36.64999771118164
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 3, val-method adv, validation accuracy 39.93000030517578, best_prec 40.96999740600586
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 4, val-method adv, validation accuracy 35.04999923706055, best_prec 36.64999771118164
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 4, val-method adv, validation accuracy 41.0, best_prec 41.0
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 5, val-method adv, validation accuracy 37.16999816894531, best_prec 37.16999816894531
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 5, val-method adv, validation accuracy 40.65999984741211, best_prec 41.0
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 6, val-method adv, validation accuracy 34.209999084472656, best_prec 37.16999816894531
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 6, val-method adv, validation accuracy 40.56999969482422, best_prec 41.0
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 7, val-method adv, validation accuracy 37.90999984741211, best_prec 37.90999984741211
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 7, val-method adv, validation accuracy 41.14999771118164, best_prec 41.14999771118164
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 8, val-method adv, validation accuracy 36.63999938964844, best_prec 37.90999984741211
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 8, val-method adv, validation accuracy 40.73999786376953, best_prec 41.14999771118164
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 9, val-method adv, validation accuracy 37.779998779296875, best_prec 37.90999984741211
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 9, val-method adv, validation accuracy 41.279998779296875, best_prec 41.279998779296875
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 10, val-method adv, validation accuracy 36.43000030517578, best_prec 37.90999984741211
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 10, val-method adv, validation accuracy 41.23999786376953, best_prec 41.279998779296875
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 11, val-method adv, validation accuracy 37.97999954223633, best_prec 37.97999954223633
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 11, val-method adv, validation accuracy 41.0, best_prec 41.279998779296875
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 12, val-method adv, validation accuracy 35.79999923706055, best_prec 37.97999954223633
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 12, val-method adv, validation accuracy 41.2599983215332, best_prec 41.279998779296875
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 13, val-method adv, validation accuracy 39.27000045776367, best_prec 39.27000045776367
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 13, val-method adv, validation accuracy 41.619998931884766, best_prec 41.619998931884766
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 14, val-method adv, validation accuracy 37.90999984741211, best_prec 39.27000045776367
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 14, val-method adv, validation accuracy 41.73999786376953, best_prec 41.73999786376953
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 15, val-method adv, validation accuracy 37.5, best_prec 39.27000045776367
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 15, val-method adv, validation accuracy 41.34000015258789, best_prec 41.73999786376953
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 16, val-method adv, validation accuracy 38.40999984741211, best_prec 39.27000045776367
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 16, val-method adv, validation accuracy 41.61000061035156, best_prec 41.73999786376953
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 17, val-method adv, validation accuracy 37.349998474121094, best_prec 39.27000045776367
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 17, val-method adv, validation accuracy 41.43000030517578, best_prec 41.73999786376953
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 18, val-method adv, validation accuracy 39.02000045776367, best_prec 39.27000045776367
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 18, val-method adv, validation accuracy 41.68000030517578, best_prec 41.73999786376953
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
-Epoch 19, val-method adv, validation accuracy 38.90999984741211, best_prec 39.27000045776367
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 19, val-method adv, validation accuracy 41.54999923706055, best_prec 41.73999786376953
 Pruned model: 90.00%
-Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
