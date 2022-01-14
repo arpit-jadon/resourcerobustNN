@@ -905,3 +905,425 @@
 
 	Job terminated by itself at 2022-01-10T23:57:03Z (using method 0: OF_ITS_OWN_ACCORD).
 ...
+000 (6794.000.000) 2022-01-13 12:30:53 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6794.000.000) 2022-01-13 12:30:54 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_884637>
+...
+040 (6794.000.000) 2022-01-13 12:30:58 Finished transferring input files
+...
+001 (6794.000.000) 2022-01-13 12:30:58 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+040 (6794.000.000) 2022-01-13 12:31:01 Started transferring output files
+...
+040 (6794.000.000) 2022-01-13 12:31:01 Finished transferring output files
+...
+007 (6794.000.000) 2022-01-13 12:31:01 Shadow exception!
+	Error from teaching2@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_2510050/src/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:40603>
+	1475  -  Run Bytes Sent By Job
+	148779120  -  Run Bytes Received By Job
+...
+012 (6794.000.000) 2022-01-13 12:31:01 Job was held.
+	Error from teaching2@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_2510050/src/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:40603>
+	Code 13 Subcode 2
+...
+000 (6795.000.000) 2022-01-13 12:34:40 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+009 (6795.000.000) 2022-01-13 14:50:03 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+...
+000 (4466.000.000) 2022-01-13 19:46:31 Job submitted from host: <134.96.227.101:9618?addrs=134.96.227.101-9618&alias=conduit2.cs.uni-saarland.de&noUDP&sock=schedd_1282_ec81>
+...
+040 (4466.000.000) 2022-01-13 19:46:35 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_889709>
+...
+040 (4466.000.000) 2022-01-13 19:46:41 Finished transferring input files
+...
+001 (4466.000.000) 2022-01-13 19:46:41 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+040 (4466.000.000) 2022-01-13 19:46:45 Started transferring output files
+...
+040 (4466.000.000) 2022-01-13 19:46:45 Finished transferring output files
+...
+005 (4466.000.000) 2022-01-13 19:46:45 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	1475  -  Run Bytes Sent By Job
+	148779120  -  Run Bytes Received By Job
+	1475  -  Total Bytes Sent By Job
+	148779120  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.02        4         7 
+	   Disk (KB)            : 145311      150000 402881726 
+	   Gpus (Average)       :      0           1         1 "GPU-5d3dd972"
+	   GpusMemory (MB)      :      7                       
+	   Memory (MB)          :               4096     64484 
+
+	Job terminated of its own accord at 2022-01-13T18:46:45Z with exit-code 1.
+...
+000 (4467.000.000) 2022-01-13 20:01:01 Job submitted from host: <134.96.227.101:9618?addrs=134.96.227.101-9618&alias=conduit2.cs.uni-saarland.de&noUDP&sock=schedd_1282_ec81>
+...
+040 (4467.000.000) 2022-01-13 20:01:02 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_889878>
+...
+040 (4467.000.000) 2022-01-13 20:01:04 Finished transferring input files
+...
+001 (4467.000.000) 2022-01-13 20:01:04 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (4467.000.000) 2022-01-13 20:01:13 Image size of job updated: 556
+	556  -  MemoryUsage of job (MB)
+	570324  -  ResidentSetSize of job (KB)
+...
+006 (4467.000.000) 2022-01-13 20:06:13 Image size of job updated: 2408
+	2408  -  MemoryUsage of job (MB)
+	2465904  -  ResidentSetSize of job (KB)
+...
+040 (4467.000.000) 2022-01-13 20:07:26 Started transferring output files
+...
+040 (4467.000.000) 2022-01-13 20:07:28 Finished transferring output files
+...
+005 (4467.000.000) 2022-01-13 20:07:29 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:07:57, Sys 0 00:00:20  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:07:57, Sys 0 00:00:20  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	149958016  -  Run Bytes Sent By Job
+	148779088  -  Run Bytes Received By Job
+	149958016  -  Total Bytes Sent By Job
+	148779088  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.01        4         7 
+	   Disk (KB)            : 640144      150000 402881726 
+	   Gpus (Average)       :      0.92        1         1 "GPU-5d3dd972"
+	   GpusMemory (MB)      :  12708                       
+	   Memory (MB)          :   2408        4096     64484 
+
+	Job terminated of its own accord at 2022-01-13T19:07:26Z with exit-code 0.
+...
+009 (6794.000.000) 2022-01-13 22:37:27 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+
+	Job terminated by itself at 2022-01-13T11:31:01Z (using method 0: OF_ITS_OWN_ACCORD).
+...
+000 (6802.000.000) 2022-01-13 22:37:48 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6802.000.000) 2022-01-13 22:37:49 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_891705>
+...
+040 (6802.000.000) 2022-01-13 22:37:54 Finished transferring input files
+...
+001 (6802.000.000) 2022-01-13 22:37:54 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6802.000.000) 2022-01-13 22:38:03 Image size of job updated: 556
+	556  -  MemoryUsage of job (MB)
+	570348  -  ResidentSetSize of job (KB)
+...
+006 (6802.000.000) 2022-01-13 22:43:04 Image size of job updated: 2409
+	2409  -  MemoryUsage of job (MB)
+	2466916  -  ResidentSetSize of job (KB)
+...
+006 (6802.000.000) 2022-01-13 22:44:16 Image size of job updated: 2409
+	2409  -  MemoryUsage of job (MB)
+	2467180  -  ResidentSetSize of job (KB)
+...
+040 (6802.000.000) 2022-01-13 22:44:16 Started transferring output files
+...
+040 (6802.000.000) 2022-01-13 22:44:19 Finished transferring output files
+...
+005 (6802.000.000) 2022-01-13 22:44:19 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:06:32, Sys 0 00:00:17  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	149958032  -  Run Bytes Sent By Job
+	148779200  -  Run Bytes Received By Job
+	149958032  -  Total Bytes Sent By Job
+	148779200  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.00        4         7 
+	   Disk (KB)            : 640144      150000 402881726 
+	   Gpus (Average)       :      0.91        1         1 "GPU-5d3dd972"
+	   GpusMemory (MB)      :  10228                       
+	   Memory (MB)          :   2409        4096     64484 
+
+	Job terminated of its own accord at 2022-01-13T21:44:16Z with exit-code 0.
+...
+000 (6803.000.000) 2022-01-13 23:00:47 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6803.000.000) 2022-01-13 23:00:48 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_891973>
+...
+040 (6803.000.000) 2022-01-13 23:00:50 Finished transferring input files
+...
+001 (6803.000.000) 2022-01-13 23:00:50 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6803.000.000) 2022-01-13 23:00:59 Image size of job updated: 556
+	556  -  MemoryUsage of job (MB)
+	570244  -  ResidentSetSize of job (KB)
+...
+006 (6803.000.000) 2022-01-13 23:05:59 Image size of job updated: 2406
+	2406  -  MemoryUsage of job (MB)
+	2464296  -  ResidentSetSize of job (KB)
+...
+006 (6803.000.000) 2022-01-13 23:07:12 Image size of job updated: 2407
+	2407  -  MemoryUsage of job (MB)
+	2465352  -  ResidentSetSize of job (KB)
+...
+040 (6803.000.000) 2022-01-13 23:07:12 Started transferring output files
+...
+040 (6803.000.000) 2022-01-13 23:07:15 Finished transferring output files
+...
+005 (6803.000.000) 2022-01-13 23:07:15 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:07:55, Sys 0 00:00:21  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:07:55, Sys 0 00:00:21  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	149958016  -  Run Bytes Sent By Job
+	148779200  -  Run Bytes Received By Job
+	149958016  -  Total Bytes Sent By Job
+	148779200  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.00        4         7 
+	   Disk (KB)            : 640144      150000 402881726 
+	   Gpus (Average)       :      0.93        1         1 "GPU-5d3dd972"
+	   GpusMemory (MB)      :  10228                       
+	   Memory (MB)          :   2407        4096     64484 
+
+	Job terminated of its own accord at 2022-01-13T22:07:12Z with exit-code 0.
+...
+000 (6804.000.000) 2022-01-13 23:07:46 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6804.000.000) 2022-01-13 23:07:47 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_892055>
+...
+040 (6804.000.000) 2022-01-13 23:07:49 Finished transferring input files
+...
+001 (6804.000.000) 2022-01-13 23:07:49 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6804.000.000) 2022-01-13 23:07:58 Image size of job updated: 556
+	556  -  MemoryUsage of job (MB)
+	570332  -  ResidentSetSize of job (KB)
+...
+006 (6804.000.000) 2022-01-13 23:12:59 Image size of job updated: 2405
+	2405  -  MemoryUsage of job (MB)
+	2463260  -  ResidentSetSize of job (KB)
+...
+040 (6804.000.000) 2022-01-13 23:14:11 Started transferring output files
+...
+040 (6804.000.000) 2022-01-13 23:14:14 Finished transferring output files
+...
+005 (6804.000.000) 2022-01-13 23:14:14 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:06:29, Sys 0 00:00:17  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	149958016  -  Run Bytes Sent By Job
+	148779200  -  Run Bytes Received By Job
+	149958016  -  Total Bytes Sent By Job
+	148779200  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.01        4         7 
+	   Disk (KB)            : 640144      150000 402881726 
+	   Gpus (Average)       :      0.91        1         1 "GPU-5d3dd972"
+	   GpusMemory (MB)      :  10228                       
+	   Memory (MB)          :   2405        4096     64484 
+
+	Job terminated of its own accord at 2022-01-13T22:14:11Z with exit-code 0.
+...
+000 (6805.000.000) 2022-01-14 00:47:25 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6805.000.000) 2022-01-14 00:47:26 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching2_3543_1d29_893215>
+...
+040 (6805.000.000) 2022-01-14 00:47:28 Finished transferring input files
+...
+001 (6805.000.000) 2022-01-14 00:47:29 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6805.000.000) 2022-01-14 00:47:39 Image size of job updated: 271
+	271  -  MemoryUsage of job (MB)
+	277656  -  ResidentSetSize of job (KB)
+...
+040 (6805.000.000) 2022-01-14 00:47:40 Started transferring output files
+...
+040 (6805.000.000) 2022-01-14 00:47:40 Finished transferring output files
+...
+005 (6805.000.000) 2022-01-14 00:47:40 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:04, Sys 0 00:00:01  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:04, Sys 0 00:00:01  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	5020  -  Run Bytes Sent By Job
+	148779136  -  Run Bytes Received By Job
+	5020  -  Total Bytes Sent By Job
+	148779136  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.01        1         7 
+	   Disk (KB)            : 145349      150000 402881726 
+	   Gpus (Average)       :      0                     1 "GPU-5d3dd972"
+	   GpusMemory (MB)      :      7                       
+	   Memory (MB)          :    271           1     64484 
+
+	Job terminated of its own accord at 2022-01-13T23:47:40Z with exit-code 1.
+...
+000 (6806.000.000) 2022-01-14 01:08:16 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6806.000.000) 2022-01-14 01:08:17 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching1_3543_1d29_893461>
+...
+040 (6806.000.000) 2022-01-14 01:08:20 Finished transferring input files
+...
+001 (6806.000.000) 2022-01-14 01:08:21 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6806.000.000) 2022-01-14 01:08:29 Image size of job updated: 270
+	270  -  MemoryUsage of job (MB)
+	277384  -  ResidentSetSize of job (KB)
+...
+040 (6806.000.000) 2022-01-14 01:08:30 Started transferring output files
+...
+040 (6806.000.000) 2022-01-14 01:08:30 Finished transferring output files
+...
+005 (6806.000.000) 2022-01-14 01:08:30 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6112  -  Run Bytes Sent By Job
+	148779120  -  Run Bytes Received By Job
+	6112  -  Total Bytes Sent By Job
+	148779120  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.04        1         7 
+	   Disk (KB)            : 145350      150000 402881726 
+	   Gpus (Average)       :      0                     1 "GPU-0833fde1"
+	   GpusMemory (MB)      :      7                       
+	   Memory (MB)          :    270           1     64484 
+
+	Job terminated of its own accord at 2022-01-14T00:08:30Z with exit-code 1.
+...
+000 (6807.000.000) 2022-01-14 01:10:25 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6807.000.000) 2022-01-14 01:10:37 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching1_3543_1d29_893489>
+...
+040 (6807.000.000) 2022-01-14 01:10:39 Finished transferring input files
+...
+001 (6807.000.000) 2022-01-14 01:10:40 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6807.000.000) 2022-01-14 01:10:49 Image size of job updated: 271
+	271  -  MemoryUsage of job (MB)
+	277572  -  ResidentSetSize of job (KB)
+...
+040 (6807.000.000) 2022-01-14 01:10:50 Started transferring output files
+...
+040 (6807.000.000) 2022-01-14 01:10:50 Finished transferring output files
+...
+005 (6807.000.000) 2022-01-14 01:10:50 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6070  -  Run Bytes Sent By Job
+	148779104  -  Run Bytes Received By Job
+	6070  -  Total Bytes Sent By Job
+	148779104  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.04        1         7 
+	   Disk (KB)            : 145350      150000 402881726 
+	   Gpus (Average)       :      0                     1 "GPU-0833fde1"
+	   GpusMemory (MB)      :      7                       
+	   Memory (MB)          :    271           1     64484 
+
+	Job terminated of its own accord at 2022-01-14T00:10:50Z with exit-code 1.
+...
+000 (6808.000.000) 2022-01-14 01:18:24 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6808.000.000) 2022-01-14 01:18:25 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=interactive5_3543_1d29_893581>
+...
+040 (6808.000.000) 2022-01-14 01:18:27 Finished transferring input files
+...
+001 (6808.000.000) 2022-01-14 01:18:28 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6808.000.000) 2022-01-14 01:18:37 Image size of job updated: 67364
+	2  -  MemoryUsage of job (MB)
+	1920  -  ResidentSetSize of job (KB)
+...
+004 (6808.000.000) 2022-01-14 01:22:29 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	148778848  -  Run Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.00        1         1 
+	   Disk (KB)            : 145325      150000 402881726 
+	   Gpus (Average)       :      0                     1 "GPU-35441559"
+	   GpusMemory (MB)      :      7                       
+	   Memory (MB)          :      2           2     64484 
+...
+009 (6808.000.000) 2022-01-14 01:22:29 Job was aborted.
+...
+000 (6809.000.000) 2022-01-14 01:23:23 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6809.000.000) 2022-01-14 01:23:24 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching1_3543_1d29_893639>
+...
+040 (6809.000.000) 2022-01-14 01:23:29 Finished transferring input files
+...
+004 (6809.000.000) 2022-01-14 01:23:30 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	243248448  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :        0        1         7 
+	   Disk (KB)            :   281342   300000 402881726 
+	   Gpus (Average)       :                           1 "GPU-0833fde1"
+	   Memory (MB)          :                 1     64484 
+...
+009 (6809.000.000) 2022-01-14 01:23:30 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+...
+000 (6810.000.000) 2022-01-14 01:23:44 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6810.000.000) 2022-01-14 01:23:45 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=interactive5_3543_1d29_893644>
+...
+040 (6810.000.000) 2022-01-14 01:23:50 Finished transferring input files
+...
+001 (6810.000.000) 2022-01-14 01:23:51 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6810.000.000) 2022-01-14 01:23:59 Image size of job updated: 67364
+	2  -  MemoryUsage of job (MB)
+	1920  -  ResidentSetSize of job (KB)
+...
+006 (6810.000.000) 2022-01-14 01:59:10 Image size of job updated: 67364
+	2544  -  MemoryUsage of job (MB)
+	2605816  -  ResidentSetSize of job (KB)
+...
+004 (6810.000.000) 2022-01-14 01:59:10 Job was evicted.
+	(0) CPU times
+		Usr 0 00:57:01, Sys 0 00:02:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	298695424  -  Run Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.00        1         1 
+	   Disk (KB)            : 640113      300000 402881726 
+	   Gpus (Average)       :      0.28                  1 "GPU-35441559"
+	   GpusMemory (MB)      :  11532                       
+	   Memory (MB)          :   2544           2     64484 
+...
+009 (6810.000.000) 2022-01-14 01:59:10 Job was aborted.
+...

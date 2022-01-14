@@ -15,3 +15,6 @@
 009 (6732.000.000) 2022-01-11 00:01:44 Job was aborted.
 	via condor_rm (by user mlcysec_team002)
 ...
+009 (6790.000.000) 2022-01-13 22:37:27 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+...

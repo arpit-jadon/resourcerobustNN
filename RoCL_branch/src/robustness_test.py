@@ -15,6 +15,7 @@ from utils import progress_bar
 from collections import OrderedDict
 
 from attack_lib import FastGradientSignUntargeted
+from argument import test_parser
 
 args = test_parser()
 use_cuda = torch.cuda.is_available()
@@ -121,22 +122,22 @@ def test(attacker):
                 clean_loss = criterion(out, y)
 
                 clean_correct += predx.eq(y.data).cpu().sum().item()
-                
+
                 clean_acc = 100.*clean_correct/total
 
                 test_clean_loss += clean_loss.data
-        
+
         adv_inputs = attacker.perturb(original_images=img, labels=y, random_start=args.random_start)
-            
+
         out = Linear(model(adv_inputs))
-        
+
         _, predx = torch.max(out.data, 1)
         adv_loss = criterion(out, y)
 
         adv_correct += predx.eq(y.data).cpu().sum().item()
         adv_acc = 100.*adv_correct/total
 
-        
+
         test_adv_loss += adv_loss.data
         if args.local_rank % ngpus_per_node == 0:
             progress_bar(idx, len(testloader),'Testing Loss {:.3f}, acc {:.3f} , adv Loss {:.3f}, adv acc {:.3f}'.format(test_clean_loss/(idx+1), clean_acc, test_adv_loss/(idx+1), adv_acc))
@@ -162,4 +163,3 @@ if args.local_rank % ngpus_per_node == 0:
     with open(logname, 'a') as logfile:
         logwriter = csv.writer(logfile, delimiter=',')
         logwriter.writerow([args.random_start, args.attack_type, args.epsilon, args.k, adv_acc])
-
