@@ -1,4 +1,4 @@
 hydra/datasets/*
 hydra/trained_models/
-ckpt.*
+ckpt*
 .vscode/
