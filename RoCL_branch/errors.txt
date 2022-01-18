@@ -1,9 +1,71 @@
-0it [00:00, ?it/s]  0%|          | 0/170498071 [00:00<?, ?it/s]  0%|          | 8192/170498071 [00:00<37:14, 76296.82it/s]  0%|          | 40960/170498071 [00:00<28:54, 98290.45it/s]  0%|          | 90112/170498071 [00:00<22:06, 128435.80it/s]  0%|          | 221184/170498071 [00:00<16:11, 175328.65it/s]  0%|          | 450560/170498071 [00:00<11:43, 241884.46it/s]  1%|          | 909312/170498071 [00:00<08:22, 337248.68it/s]  1%|          | 1826816/170498071 [00:01<05:56, 473675.34it/s]  2%|▏         | 3678208/170498071 [00:01<04:09, 668684.53it/s]  4%|▍         | 6774784/170498071 [00:01<02:53, 945716.36it/s]  6%|▌         | 9773056/170498071 [00:01<02:00, 1331384.83it/s]  7%|▋         | 12689408/170498071 [00:01<01:24, 1862229.84it/s]  9%|▉         | 15540224/170498071 [00:01<01:00, 2580753.56it/s] 11%|█         | 18571264/170498071 [00:01<00:42, 3545840.76it/s] 13%|█▎        | 21667840/170498071 [00:01<00:30, 4808058.35it/s] 14%|█▍        | 24666112/170498071 [00:01<00:22, 6389013.27it/s] 16%|█▌        | 27697152/170498071 [00:02<00:17, 8337161.99it/s] 18%|█▊        | 30597120/170498071 [00:02<00:13, 10437548.10it/s] 20%|█▉        | 33529856/170498071 [00:02<00:10, 12752244.95it/s] 21%|██▏       | 36462592/170498071 [00:02<00:08, 15103606.37it/s] 23%|██▎       | 39567360/170498071 [00:02<00:07, 17853640.87it/s] 25%|██▍       | 42573824/170498071 [00:02<00:06, 20025933.60it/s] 27%|██▋       | 45621248/170498071 [00:02<00:05, 21870326.46it/s] 29%|██▊       | 48685056/170498071 [00:02<00:05, 23431246.79it/s] 30%|███       | 51765248/170498071 [00:02<00:04, 24691567.56it/s] 32%|███▏      | 54632448/170498071 [00:03<00:04, 24455224.83it/s] 34%|███▍      | 57745408/170498071 [00:03<00:04, 25539088.15it/s] 36%|███▌      | 60841984/170498071 [00:03<00:04, 26302894.93it/s] 37%|███▋      | 63905792/170498071 [00:03<00:03, 26789136.06it/s] 39%|███▉      | 66969600/170498071 [00:03<00:03, 27144108.18it/s] 41%|████      | 70066176/170498071 [00:03<00:03, 27501040.12it/s] 43%|████▎     | 73113600/170498071 [00:03<00:03, 27627617.28it/s] 45%|████▍     | 75915264/170498071 [00:03<00:03, 26911570.78it/s] 46%|████▋     | 78962688/170498071 [00:03<00:03, 27256173.17it/s] 48%|████▊     | 82026496/170498071 [00:04<00:03, 27504104.59it/s] 50%|████▉     | 85090304/170498071 [00:04<00:03, 27701014.82it/s] 52%|█████▏    | 88154112/170498071 [00:04<00:02, 27823358.52it/s] 54%|█████▎    | 91250688/170498071 [00:04<00:02, 27988597.66it/s] 55%|█████▌    | 94060544/170498071 [00:04<00:02, 27204031.96it/s] 57%|█████▋    | 97050624/170498071 [00:04<00:02, 27326965.94it/s] 59%|█████▊    | 100114432/170498071 [00:04<00:02, 27551017.61it/s] 61%|██████    | 103211008/170498071 [00:04<00:02, 27809732.59it/s] 62%|██████▏   | 106291200/170498071 [00:04<00:02, 27940220.04it/s] 64%|██████▍   | 109371392/170498071 [00:05<00:02, 28028351.38it/s] 66%|██████▌   | 112517120/170498071 [00:05<00:02, 28137153.20it/s] 68%|██████▊   | 115335168/170498071 [00:05<00:02, 27290185.64it/s] 69%|██████▉   | 118382592/170498071 [00:05<00:01, 27478229.01it/s] 71%|███████   | 121446400/170498071 [00:05<00:01, 27671227.30it/s] 73%|███████▎  | 124542976/170498071 [00:05<00:01, 27897712.30it/s] 75%|███████▍  | 127639552/170498071 [00:05<00:01, 28053779.59it/s] 77%|███████▋  | 130719744/170498071 [00:05<00:01, 28117369.75it/s] 78%|███████▊  | 133783552/170498071 [00:05<00:01, 28110803.67it/s] 80%|████████  | 136847360/170498071 [00:06<00:01, 28106430.55it/s] 82%|████████▏ | 139665408/170498071 [00:06<00:01, 27300937.71it/s] 84%|████████▎ | 142778368/170498071 [00:06<00:01, 27670192.87it/s] 86%|████████▌ | 145858560/170498071 [00:06<00:00, 27855018.89it/s] 87%|████████▋ | 148971520/170498071 [00:06<00:00, 28055005.75it/s] 89%|████████▉ | 152035328/170498071 [00:06<00:00, 28055889.65it/s] 91%|█████████ | 155115520/170498071 [00:06<00:00, 28105603.60it/s] 93%|█████████▎| 158212096/170498071 [00:06<00:00, 28196204.30it/s] 95%|█████████▍| 161275904/170498071 [00:06<00:00, 28153919.67it/s] 96%|█████████▌| 164093952/170498071 [00:07<00:00, 27308585.24it/s] 98%|█████████▊| 166961152/170498071 [00:07<00:00, 26914593.79it/s]100%|█████████▉| 170074112/170498071 [00:07<00:00, 27379953.28it/s]170500096it [00:10, 16400091.82it/s]                               
-/opt/conda/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:129: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
-  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
-[W reducer.cpp:1050] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters. This flag results in an extra traversal of the autograd graph every iteration, which can adversely affect performance. If your model indeed never has any unused parameters, consider turning this flag off. Note that this warning may be a false positive your model has flow control causing later iterations to have unused parameters. (function operator())
-/raid/condor/lib/condor/execute/dir_1716860/torchlars/lars.py:141: UserWarning: This overload of add_ is deprecated:
-	add_(Number alpha, Tensor other)
-Consider using one of the following signatures instead:
-	add_(Tensor other, *, Number alpha) (Triggered internally at  /opt/conda/conda-bld/pytorch_1616554793803/work/torch/csrc/utils/python_arg_parser.cpp:1005.)
-  p.grad.add_(weight_decay, p.data)
+usage: linear_eval.py [-h] [--train_type TRAIN_TYPE] [--finetune FINETUNE]
+                      [--epochwise EPOCHWISE] [--ss SS] [--trans TRANS]
+                      [--clean CLEAN] [--adv_img ADV_IMG] [--lr LR]
+                      [--lr_multiplier LR_MULTIPLIER] [--dataset DATASET]
+                      [--load_checkpoint LOAD_CHECKPOINT] [--model MODEL]
+                      [--name NAME] [--seed SEED] [--batch-size BATCH_SIZE]
+                      [--epoch EPOCH]
+                      [--color_jitter_strength COLOR_JITTER_STRENGTH]
+                      [--temperature TEMPERATURE] [--local_rank LOCAL_RANK]
+                      [--ngpu NGPU] [--min MIN] [--max MAX]
+                      [--attack_type ATTACK_TYPE] [--epsilon EPSILON]
+                      [--alpha ALPHA] [--k K] [--random_start RANDOM_START]
+linear_eval.py: error: argument --lr: invalid float value: 'dataset=cifar-10'
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 340, in <module>
+    main()
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 326, in main
+    sigkill_handler(signal.SIGTERM, None)  # not coming back
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 301, in sigkill_handler
+    raise subprocess.CalledProcessError(returncode=last_return_code, cmd=cmd)
+subprocess.CalledProcessError: Command '['/opt/conda/bin/python', '-u', 'linear_eval.py', '--local_rank=0', '--ngpu', '1', '--batch-size=1024', '--train_type=linear_eval', '--model=0.1', '--epoch', '150', '--lr', 'dataset=cifar-10', '--name', 'type=ResNet18', '--load_checkpoint=ckpt.t7Rep_attack_ep_0.0314_alpha_0.007_min_val_0.0_max_val_1.0_max_iters_7_type_linf_randomstart_Truecontrastive_ResNet18_cifar-10_b256_nGPU1_l256_0', '--clean=True', '--dataset=', '--seed=']' returned non-zero exit status 2.
+usage: robustness_test.py [-h] [--train_type TRAIN_TYPE] [--dataset DATASET]
+                          [--load_checkpoint LOAD_CHECKPOINT] [--model MODEL]
+                          [--name NAME] [--seed SEED]
+                          [--batch-size BATCH_SIZE]
+                          [--color_jitter_strength COLOR_JITTER_STRENGTH]
+                          [--temperature TEMPERATURE]
+                          [--local_rank LOCAL_RANK] [--ngpu NGPU]
+                          [--attack_type ATTACK_TYPE] [--epsilon EPSILON]
+                          [--alpha ALPHA] [--k K]
+                          [--random_start RANDOM_START]
+robustness_test.py: error: argument --seed: invalid int value: ''
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 340, in <module>
+    main()
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 326, in main
+    sigkill_handler(signal.SIGTERM, None)  # not coming back
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 301, in sigkill_handler
+    raise subprocess.CalledProcessError(returncode=last_return_code, cmd=cmd)
+subprocess.CalledProcessError: Command '['/opt/conda/bin/python', '-u', 'robustness_test.py', '--local_rank=0', '--ngpu', '1', '--train_type=linear_eval', '--name=type=ResNet18', '--batch-size=1024', '--model=0.1', '--load_checkpoint=../checkpoint/ckpt.t7type=ResNet18_Evaluate_linear_eval_ResNet18__', '--attack_type=linf', '--epsilon=0.0314', '--alpha=0.00314', '--k=20', '--module', '--dataset=', '--seed=']' returned non-zero exit status 2.
+usage: robustness_test.py [-h] [--train_type TRAIN_TYPE] [--dataset DATASET]
+                          [--load_checkpoint LOAD_CHECKPOINT] [--model MODEL]
+                          [--name NAME] [--seed SEED]
+                          [--batch-size BATCH_SIZE]
+                          [--color_jitter_strength COLOR_JITTER_STRENGTH]
+                          [--temperature TEMPERATURE]
+                          [--local_rank LOCAL_RANK] [--ngpu NGPU]
+                          [--attack_type ATTACK_TYPE] [--epsilon EPSILON]
+                          [--alpha ALPHA] [--k K]
+                          [--random_start RANDOM_START]
+robustness_test.py: error: argument --seed: invalid int value: ''
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 340, in <module>
+    main()
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 326, in main
+    sigkill_handler(signal.SIGTERM, None)  # not coming back
+  File "/opt/conda/lib/python3.8/site-packages/torch/distributed/launch.py", line 301, in sigkill_handler
+    raise subprocess.CalledProcessError(returncode=last_return_code, cmd=cmd)
+subprocess.CalledProcessError: Command '['/opt/conda/bin/python', '-u', 'robustness_test.py', '--local_rank=0', '--ngpu', '1', '--train_type=linear_eval', '--name=type=ResNet18', '--batch-size=1024', '--model=0.1', '--load_checkpoint=../checkpoint/ckpt.t7type=ResNet18_Evaluate_linear_eval_ResNet18__', '--attack_type=linf', '--epsilon=0.0627', '--alpha=0.00627', '--k=20', '--module', '--dataset=', '--seed=']' returned non-zero exit status 2.
