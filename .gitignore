@@ -1,3 +1,8 @@
 hydra/datasets/*
 hydra/trained_models/
+<<<<<<< HEAD
 RoCL_branch/ckpt*
+=======
+ckpt*
+.vscode/
+>>>>>>> cc4fc1a0b6032ce601c54f2c360b42c2b83397af
