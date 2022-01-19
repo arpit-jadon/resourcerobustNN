@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            // "program": "train.py",
+            "console": "integratedTerminal",
+            "args": ["--arch", "resnet18", "--exp-name", "exp1", "--exp-mode","pretrain","--configs","configs/configs.yml",
+                   "--trainer","adv","--val_method","adv","--k","1.0","--epochs","1","--batch-size","32","--test-batch-size","32",
+                   "--source-net", "trained_models/ckpt1", "--save-dense"
+                ]
+        }
+    ]
+}
