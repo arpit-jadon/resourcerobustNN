@@ -42,7 +42,7 @@ logout
 ### 2. Fetch files from job location
 ```
 condor_ssh_to_job -ssh sftp <job_id>
-```
+...
 sftp> get outputfile.dat
 ```
 
