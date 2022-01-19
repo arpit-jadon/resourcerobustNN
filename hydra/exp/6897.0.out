@@ -1,7 +1,0 @@
-=> Reading YAML config from configs/configs.yml
-#################### Pruning network ####################
-===>>  gradient for weights: None  | training importance scores only
-Initialization relevance score with None initialization
-Files already downloaded and verified
-Files already downloaded and verified
-Traing loader: 50000 images, Test loader: 10000 images
