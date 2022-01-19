@@ -9,7 +9,7 @@ def get_model(args):
         raise NotImplementedError
 
     if 'contrastive' in args.train_type or 'linear_eval' in args.train_type:
-        contrastive_learning=False  
+        contrastive_learning=True  
     else:
         contrastive_learning=False
 
