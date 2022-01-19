@@ -43,6 +43,9 @@ logout
 ```
 condor_ssh_to_job -ssh sftp <job_id>
 ```
+sftp> get outputfile.dat
+```
+
 
 
 
