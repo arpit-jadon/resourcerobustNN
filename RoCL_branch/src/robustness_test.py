@@ -63,10 +63,10 @@ elif args.dataset=='cifar-100':
 checkpoint_ = torch.load(args.load_checkpoint)
 new_state_dict = OrderedDict()
 for k, v in checkpoint_['model'].items():
-    if args.module:
-        name = k[7:]
-    else:
-        name = k
+    #if args.module:
+    name = k[7:]
+    #else:
+        # name = k
     new_state_dict[name] = v
 
 model.load_state_dict(new_state_dict)
@@ -74,10 +74,10 @@ model.load_state_dict(new_state_dict)
 linearcheckpoint_ = torch.load(args.load_checkpoint+'_linear')
 new_state_dict = OrderedDict()
 for k, v in linearcheckpoint_['model'].items():
-    if args.module:
-        name = k[7:] # remove `module.`
-    else:
-        name = k
+    # if args.module:
+    name = k[7:] # remove `module.`
+    # else:
+        # name = k
     new_state_dict[name] = v
 Linear.load_state_dict(new_state_dict)
 
