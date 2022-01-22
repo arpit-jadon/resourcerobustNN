@@ -1955,3 +1955,178 @@
 
 	Job terminated of its own accord at 2022-01-22T14:05:24Z with exit-code 0.
 ...
+000 (6967.000.000) 2022-01-22 15:16:07 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6967.000.000) 2022-01-22 15:16:08 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching4_3543_1d29_1036669>
+...
+001 (6967.000.000) 2022-01-22 15:16:13 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+040 (6967.000.000) 2022-01-22 15:16:13 Finished transferring input files
+...
+006 (6967.000.000) 2022-01-22 15:16:21 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576308  -  ResidentSetSize of job (KB)
+...
+006 (6967.000.000) 2022-01-22 15:16:28 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576312  -  ResidentSetSize of job (KB)
+...
+040 (6967.000.000) 2022-01-22 15:16:28 Started transferring output files
+...
+040 (6967.000.000) 2022-01-22 15:16:28 Finished transferring output files
+...
+007 (6967.000.000) 2022-01-22 15:16:28 Shadow exception!
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1457091/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:46813>
+	7821  -  Run Bytes Sent By Job
+	243489872  -  Run Bytes Received By Job
+...
+012 (6967.000.000) 2022-01-22 15:16:28 Job was held.
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1457091/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:46813>
+	Code 13 Subcode 2
+...
+000 (6968.000.000) 2022-01-22 15:17:50 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6968.000.000) 2022-01-22 15:17:51 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching4_3543_1d29_1036690>
+...
+040 (6968.000.000) 2022-01-22 15:17:55 Finished transferring input files
+...
+001 (6968.000.000) 2022-01-22 15:17:55 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6968.000.000) 2022-01-22 15:18:04 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576216  -  ResidentSetSize of job (KB)
+...
+006 (6968.000.000) 2022-01-22 15:18:10 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576220  -  ResidentSetSize of job (KB)
+...
+040 (6968.000.000) 2022-01-22 15:18:10 Started transferring output files
+...
+040 (6968.000.000) 2022-01-22 15:18:10 Finished transferring output files
+...
+007 (6968.000.000) 2022-01-22 15:18:10 Shadow exception!
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1459818/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:37587>
+	7863  -  Run Bytes Sent By Job
+	243489856  -  Run Bytes Received By Job
+...
+012 (6968.000.000) 2022-01-22 15:18:10 Job was held.
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1459818/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:37587>
+	Code 13 Subcode 2
+...
+009 (6968.000.000) 2022-01-22 15:19:28 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+
+	Job terminated by itself at 2022-01-22T14:18:10Z (using method 0: OF_ITS_OWN_ACCORD).
+...
+009 (6967.000.000) 2022-01-22 15:19:28 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+
+	Job terminated by itself at 2022-01-22T14:16:28Z (using method 0: OF_ITS_OWN_ACCORD).
+...
+000 (6969.000.000) 2022-01-22 15:19:36 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6969.000.000) 2022-01-22 15:19:37 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching4_3543_1d29_1036711>
+...
+040 (6969.000.000) 2022-01-22 15:19:41 Finished transferring input files
+...
+001 (6969.000.000) 2022-01-22 15:19:41 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6969.000.000) 2022-01-22 15:19:49 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576192  -  ResidentSetSize of job (KB)
+...
+006 (6969.000.000) 2022-01-22 15:19:55 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576196  -  ResidentSetSize of job (KB)
+...
+040 (6969.000.000) 2022-01-22 15:19:55 Started transferring output files
+...
+040 (6969.000.000) 2022-01-22 15:19:55 Finished transferring output files
+...
+007 (6969.000.000) 2022-01-22 15:19:55 Shadow exception!
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1462691/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:34961>
+	7783  -  Run Bytes Sent By Job
+	243489856  -  Run Bytes Received By Job
+...
+012 (6969.000.000) 2022-01-22 15:19:55 Job was held.
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1462691/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:34961>
+	Code 13 Subcode 2
+...
+009 (6969.000.000) 2022-01-22 15:24:07 Job was aborted.
+	via condor_rm (by user mlcysec_team002)
+
+	Job terminated by itself at 2022-01-22T14:19:55Z (using method 0: OF_ITS_OWN_ACCORD).
+...
+000 (6970.000.000) 2022-01-22 15:24:53 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6970.000.000) 2022-01-22 15:24:57 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching4_3543_1d29_1036774>
+...
+040 (6970.000.000) 2022-01-22 15:25:01 Finished transferring input files
+...
+001 (6970.000.000) 2022-01-22 15:25:01 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+006 (6970.000.000) 2022-01-22 15:25:10 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576336  -  ResidentSetSize of job (KB)
+...
+006 (6970.000.000) 2022-01-22 15:25:15 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576340  -  ResidentSetSize of job (KB)
+...
+040 (6970.000.000) 2022-01-22 15:25:15 Started transferring output files
+...
+040 (6970.000.000) 2022-01-22 15:25:16 Finished transferring output files
+...
+007 (6970.000.000) 2022-01-22 15:25:16 Shadow exception!
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1470828/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:33815>
+	7773  -  Run Bytes Sent By Job
+	243489856  -  Run Bytes Received By Job
+...
+012 (6970.000.000) 2022-01-22 15:25:16 Job was held.
+	Error from teaching4@uller.cs.uni-saarland.de: STARTER at 134.96.224.230 failed to send file(s) to <134.96.227.100:9618>: error reading from /raid/condor/lib/condor/execute/dir_1470828/./checkpoint/: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <134.96.224.230:33815>
+	Code 13 Subcode 2
+...
+000 (6971.000.000) 2022-01-22 15:26:39 Job submitted from host: <134.96.227.100:9618?addrs=134.96.227.100-9618&alias=conduit.cs.uni-saarland.de&noUDP&sock=schedd_1232_a0c4>
+...
+040 (6971.000.000) 2022-01-22 15:26:40 Started transferring input files
+	Transferring to host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=teaching4_3543_1d29_1036794>
+...
+001 (6971.000.000) 2022-01-22 15:26:45 Job executing on host: <134.96.224.230:9618?addrs=134.96.224.230-9618&alias=uller.cs.uni-saarland.de&noUDP&sock=startd_2231_dbe1>
+...
+040 (6971.000.000) 2022-01-22 15:26:45 Finished transferring input files
+...
+006 (6971.000.000) 2022-01-22 15:26:53 Image size of job updated: 562
+	562  -  MemoryUsage of job (MB)
+	576132  -  ResidentSetSize of job (KB)
+...
+006 (6971.000.000) 2022-01-22 15:31:54 Image size of job updated: 2564
+	2564  -  MemoryUsage of job (MB)
+	2625720  -  ResidentSetSize of job (KB)
+...
+040 (6971.000.000) 2022-01-22 16:33:58 Started transferring output files
+...
+040 (6971.000.000) 2022-01-22 16:33:59 Finished transferring output files
+...
+005 (6971.000.000) 2022-01-22 16:34:00 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 04:54:25, Sys 0 00:08:53  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 04:54:25, Sys 0 00:08:53  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	48323424  -  Run Bytes Sent By Job
+	243489856  -  Run Bytes Received By Job
+	48323424  -  Total Bytes Sent By Job
+	243489856  -  Total Bytes Received By Job
+	Partitionable Resources :     Usage  Request Allocated Assigned
+	   Cpus                 :      0.00        1         7 
+	   Disk (KB)            : 633378      250000 402881726 
+	   Gpus (Average)       :      0.71                  1 "GPU-7ba7fd77"
+	   GpusMemory (MB)      :   9090                       
+	   Memory (MB)          :   2564           1     64484 
+
+	Job terminated of its own accord at 2022-01-22T15:33:58Z with exit-code 0.
+...
