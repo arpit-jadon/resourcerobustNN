@@ -40,10 +40,36 @@ from utils.model import (
     snip_init,
 )
 
-
 # TODO: update wrn, resnet models. Save both subnet and dense version.
 # TODO: take care of BN, bias in pruning, support structured pruning
 
+
+def load_rocl_model(model, chk_path:str, device):
+    '''load common layer weights; there is dicrepancy in naming of layers (b/w RoCL and HYDRA)
+        which is taken care of.'''
+
+    checkpoint = torch.load(chk_path, map_location=device) # pretrained model weights RoCL
+    pretrn_stat_dict = checkpoint['model'] # extract model state dictionarys
+    # pretrn_layers = set(pretrn_stat_dict.keys()) # layer names
+    pretrn_layers_clean = set([lyr.replace('module.','') for lyr in pretrn_stat_dict.keys()])
+
+    init_stat_dict = model.state_dict() # original model weights
+    init_layers = set(init_stat_dict.keys()) # layer names
+
+    uniq_uncommon_layers = init_layers.symmetric_difference(pretrn_layers_clean) 
+    print(f'Missing in RoCL, total={len(uniq_uncommon_layers)}, {uniq_uncommon_layers}')
+
+    #finding common layers and update only those
+    common_layers = init_layers.intersection(pretrn_layers_clean)
+    # replacing by pretrained weights
+    for layer in common_layers:
+        init_stat_dict[layer] = pretrn_stat_dict['module.'+layer]
+
+    # load to model
+    # model.load_state_dict(init_stat_dict)
+    # return model
+    checkpoint = {"state_dict": init_stat_dict}
+    return checkpoint
 
 def main():
     args = parse_args()
@@ -153,8 +179,12 @@ def main():
     if args.source_net:
         if os.path.isfile(args.source_net):
             logger.info("=> loading source model from '{}'".format(args.source_net))
-            checkpoint = torch.load(args.source_net, map_location=device)
+            # checkpoint = torch.load(args.source_net, map_location=device)
+            checkpoint = load_rocl_model(model, args.source_net, device=device)
             model.load_state_dict(checkpoint["state_dict"])
+            
+            # model = load_rocl_model(model, args.source_net, device=device)
+
             logger.info("=> loaded checkpoint '{}'".format(args.source_net))
         else:
             logger.info("=> no checkpoint found at '{}'".format(args.resume))
@@ -191,7 +221,7 @@ def main():
             checkpoint = torch.load(args.resume, map_location=device)
             args.start_epoch = checkpoint["epoch"]
             best_prec1 = checkpoint["best_prec1"]
-            model.load_state_dict(checkpoint["state_dict"])
+            model.load_state_dict(checkpoint["state_dict"]) #TODO: change for RoCL pretrained weights
             optimizer.load_state_dict(checkpoint["optimizer"])
             logger.info(
                 "=> loaded checkpoint '{}' (epoch {})".format(

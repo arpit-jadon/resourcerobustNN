@@ -19,7 +19,7 @@ from argument import parser, print_args
 from utils import progress_bar, checkpoint, AverageMeter, accuracy
 
 from loss import pairwise_similarity, NT_xent
-from torchlars import LARS
+#from torchlars import LARS  
 from warmup_scheduler import GradualWarmupScheduler
 
 os.environ['MASTER_ADDR'] = 'localhost'
@@ -113,8 +113,10 @@ model_params += model.parameters()
 model_params += projector.parameters()
 
 # LARS optimizer from KAKAO-BRAIN github "pip install torchlars" or git from https://github.com/kakaobrain/torchlars
-base_optimizer  = optim.SGD(model_params, lr=args.lr, momentum=0.9, weight_decay=args.decay)
-optimizer       = LARS(optimizer=base_optimizer, eps=1e-8, trust_coef=0.001)
+#base_optimizer  = optim.SGD(model_params, lr=args.lr, momentum=0.9, weight_decay=args.decay)
+#optimizer       = LARS(model_params, eps=1e-8, trust_coef=0.001)
+#optimizer       = LARS(params=model_params,lr=args.lr, momentum=0.9,   weight_decay=args.decay, eta=0.001, max_epoch=200 )
+optimizer = optim.SGD(model_params, lr=args.lr, momentum=0.9, weight_decay=args.decay)
 
 # Cosine learning rate annealing (SGDR) & Learning rate warmup git from https://github.com/ildoonet/pytorch-gradual-warmup-lr #
 scheduler_cosine = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epoch)
@@ -190,8 +192,8 @@ def test(epoch, train_loss):
         checkpoint(model, train_loss, epoch, args, optimizer)
         checkpoint(projector, train_loss, epoch, args, optimizer, save_name_add='_projector')
        
-    # Save at every 100 epoch #
-    elif epoch % 100 == 0 and args.local_rank % ngpus_per_node == 0:
+    # Save at every 50 epoch #
+    elif epoch % 50 == 0 and args.local_rank % ngpus_per_node == 0:
         checkpoint(model, train_loss, epoch, args, optimizer, save_name_add='_epoch_'+str(epoch))
         checkpoint(projector, train_loss, epoch, args, optimizer, save_name_add=('_projector_epoch_' + str(epoch)))
 
