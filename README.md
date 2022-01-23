@@ -47,6 +47,12 @@ sftp> get outputfile.dat
 ```
 
 
+## RoCL    
+
+### Evaluation
+1. Run the first step of the total_process bash script while passing the trained model for linear classifier training.
+2. Previous step gives two models. Now, run the next two steps for robustness evaluation. 
+3. Previous step outputs robustness evaluation performance for two epsilon values.
 
 
 ## HYDRA    
