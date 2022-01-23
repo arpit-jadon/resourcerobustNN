@@ -63,3 +63,11 @@ There three parts (steps) in HYDRA method. We have to uncomment and run each par
 1. Place the command in `executable_cmd.sh`
 2. Update `docker.sub` according to the requirements.
 3. Run: `condor_submit docker.sub` (include `-i` flag for interactive mode) 
+
+## Transfer attack
+We create adversarial examples with PGD white-box attack with ResNet-20 auxiliar model. This attack will be considered as black-box attack on HYDRA models.
+
+Create test data using below:
+```
+python pgd_transfer_attack.py
+```
