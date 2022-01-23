@@ -156,7 +156,7 @@ def main():
     D = data.__dict__[args.dataset](args, normalize=args.normalize)
     train_loader, test_loader = D.data_loaders()
 
-    logger.info(args.dataset, D, len(train_loader.dataset), len(test_loader.dataset))
+    logger.info(f'Dataset:{args.dataset}, D:{D}, train len:{len(train_loader.dataset)}, test len:{len(test_loader.dataset)}')
 
     # Semi-sup dataloader
     if args.is_semisup:
