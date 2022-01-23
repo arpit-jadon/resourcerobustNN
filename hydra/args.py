@@ -10,6 +10,18 @@ def parse_args():
         "--configs", type=str, default="", help="configs file",
     )
     parser.add_argument(
+        "--black_box_eval",
+        action="store_true",
+        default=False,
+        help='If set to True, it will only evaluate on black box attack and exit',
+    )
+    parser.add_argument(
+        '--black_box_path',
+        default='../cifar10_pgd.pt',
+        type=str, 
+        help="Path to adversarial examples from PGD transfer attack (black box for HYDRA)",
+    )
+    parser.add_argument(
         "--result-dir",
         default="./trained_models",
         type=str,

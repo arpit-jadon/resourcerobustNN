@@ -40,6 +40,16 @@ from utils.model import (
     snip_init,
 )
 
+# add path for black box attack
+current = os.path.dirname(os.path.realpath(__file__))
+# Getting the parent directory name # where the current directory is present.
+parent = os.path.dirname(current)  
+# adding the parent directory to # the sys.path.
+sys.path.append(parent)
+
+from pgd_transfer_attack import black_box_eval
+
+
 # TODO: update wrn, resnet models. Save both subnet and dense version.
 # TODO: take care of BN, bias in pruning, support structured pruning
 
@@ -246,6 +256,10 @@ def main():
         last_ckpt = checkpoint["state_dict"]
     else:
         last_ckpt = copy.deepcopy(model.state_dict())
+
+    if args.black_box_eval:
+        black_box_eval(model, args.black_box_path, args.batch_size)
+        exit()
 
     # Start training
     for epoch in range(args.start_epoch, args.epochs + args.warmup_epochs):

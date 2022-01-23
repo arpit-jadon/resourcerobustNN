@@ -207,7 +207,7 @@ def dense_to_subnet(model, state_dict):
 
 def current_model_pruned_fraction(model, result_dir, verbose=True):
     """
-        Find pruning raio per layer. Return average of them.
+        Find pruning ratio per layer. Return average of them.
         Result_dict should correspond to the checkpoint of model.
     """
 
