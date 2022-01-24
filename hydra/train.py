@@ -4,6 +4,7 @@ from __future__ import absolute_import
 
 import os
 import sys
+from matplotlib import use
 import numpy as np
 import argparse
 import importlib
@@ -54,7 +55,7 @@ from pgd_transfer_attack import black_box_eval
 # TODO: take care of BN, bias in pruning, support structured pruning
 
 
-def load_rocl_model(model, chk_path:str, device):
+def load_rocl_model(model, chk_path:str, device, load_RoCL):
     '''load common layer weights; there is dicrepancy in naming of layers (b/w RoCL and HYDRA)
         which is taken care of.'''
 
@@ -75,12 +76,14 @@ def load_rocl_model(model, chk_path:str, device):
     for layer in common_layers:
         init_stat_dict[layer] = pretrn_stat_dict['module.'+layer]
 
-    #
-    # checkpoint_linear = torch.load(chk_path+'_linear', map_location=device) # pretrained model weights RoCL
+    if load_RoCL == 'complete':
+        # Manually mapping linear classifer layer
+        checkpoint_linear = torch.load(chk_path+'_linear', map_location=device) # pretrained model weights RoCL
+        pretrn_stat_linear = checkpoint_linear['model']
+        init_stat_dict['linear.weight'] = pretrn_stat_linear['module.0.weight']
+        init_stat_dict['linear.bias'] = pretrn_stat_linear['module.0.bias']
+        print("Loaded linear classifier layer !!")
 
-    # load to model
-    # model.load_state_dict(init_stat_dict)
-    # return model
     checkpoint = {"state_dict": init_stat_dict}
     return checkpoint
 
@@ -194,8 +197,8 @@ def main():
             logger.info("=> loading source model from '{}'".format(args.source_net))
             
             # use method to read RoCL pretrained checkpoints
-            if args.use_RoCL: 
-                checkpoint = load_rocl_model(model, args.source_net, device=device)
+            if args.load_RoCL != 'unused': 
+                checkpoint = load_rocl_model(model, args.source_net, device, args.load_RoCL)
             else:
                 checkpoint = torch.load(args.source_net, map_location=device)
             model.load_state_dict(checkpoint["state_dict"])
@@ -238,7 +241,7 @@ def main():
             best_prec1 = checkpoint["best_prec1"]
             #NOTE: avoid using with RoCL pretrained weights, because other params such as
             # `epoch` etc. are missing
-            assert (not args.use_RoCL), "Resume not support with RoCL pretrained weights"
+            assert (args.load_RoCL == 'unused'), "Resume not support with RoCL pretrained weights"
             model.load_state_dict(checkpoint["state_dict"]) 
             optimizer.load_state_dict(checkpoint["optimizer"])
             logger.info(
