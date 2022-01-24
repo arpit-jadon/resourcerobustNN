@@ -60,8 +60,8 @@ def load_rocl_model(model, chk_path:str, device):
 
     checkpoint = torch.load(chk_path, map_location=device) # pretrained model weights RoCL
     pretrn_stat_dict = checkpoint['model'] # extract model state dictionarys
-    # pretrn_layers = set(pretrn_stat_dict.keys()) # layer names
-    pretrn_layers_clean = set([lyr.replace('module.','') for lyr in pretrn_stat_dict.keys()])
+    # pretrn_layers = set(pretrn_stat_dict.keys()) 
+    pretrn_layers_clean = set([lyr.replace('module.','') for lyr in pretrn_stat_dict.keys()]) # layer names
 
     init_stat_dict = model.state_dict() # original model weights
     init_layers = set(init_stat_dict.keys()) # layer names
@@ -69,11 +69,14 @@ def load_rocl_model(model, chk_path:str, device):
     uniq_uncommon_layers = init_layers.symmetric_difference(pretrn_layers_clean) 
     print(f'Missing in RoCL, total={len(uniq_uncommon_layers)}, {uniq_uncommon_layers}')
 
-    #finding common layers and update only those
+    # finding common layers and update only those
     common_layers = init_layers.intersection(pretrn_layers_clean)
     # replacing by pretrained weights
     for layer in common_layers:
         init_stat_dict[layer] = pretrn_stat_dict['module.'+layer]
+
+    #
+    # checkpoint_linear = torch.load(chk_path+'_linear', map_location=device) # pretrained model weights RoCL
 
     # load to model
     # model.load_state_dict(init_stat_dict)
@@ -189,11 +192,13 @@ def main():
     if args.source_net:
         if os.path.isfile(args.source_net):
             logger.info("=> loading source model from '{}'".format(args.source_net))
-            # checkpoint = torch.load(args.source_net, map_location=device)
-            checkpoint = load_rocl_model(model, args.source_net, device=device)
-            model.load_state_dict(checkpoint["state_dict"])
             
-            # model = load_rocl_model(model, args.source_net, device=device)
+            # use method to read RoCL pretrained checkpoints
+            if args.use_RoCL: 
+                checkpoint = load_rocl_model(model, args.source_net, device=device)
+            else:
+                checkpoint = torch.load(args.source_net, map_location=device)
+            model.load_state_dict(checkpoint["state_dict"])
 
             logger.info("=> loaded checkpoint '{}'".format(args.source_net))
         else:
@@ -231,7 +236,10 @@ def main():
             checkpoint = torch.load(args.resume, map_location=device)
             args.start_epoch = checkpoint["epoch"]
             best_prec1 = checkpoint["best_prec1"]
-            model.load_state_dict(checkpoint["state_dict"]) #TODO: change for RoCL pretrained weights
+            #NOTE: avoid using with RoCL pretrained weights, because other params such as
+            # `epoch` etc. are missing
+            assert (not args.use_RoCL), "Resume not support with RoCL pretrained weights"
+            model.load_state_dict(checkpoint["state_dict"]) 
             optimizer.load_state_dict(checkpoint["optimizer"])
             logger.info(
                 "=> loaded checkpoint '{}' (epoch {})".format(

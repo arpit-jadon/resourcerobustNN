@@ -10,6 +10,12 @@ def parse_args():
         "--configs", type=str, default="", help="configs file",
     )
     parser.add_argument(
+        "--use_RoCL",
+        action="store_true",
+        default=False,
+        help="When set, it will use checkpoint loading which support RoCL"
+    ) 
+    parser.add_argument(
         "--black_box_eval",
         action="store_true",
         default=False,
