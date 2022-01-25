@@ -146,9 +146,9 @@ def adv(model, device, val_loader, criterion, args, writer, epoch=0):
                 images,
                 target,
                 device,
-                args.epsilon,
-                args.num_steps,
-                args.step_size,
+                args.epsilon,   # eps
+                args.num_steps, # steps
+                args.step_size, # alpha
                 args.clip_min,
                 args.clip_max,
                 is_random=not args.const_init,

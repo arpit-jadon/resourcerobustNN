@@ -11,9 +11,10 @@
             "program": "${file}",
             // "program": "train.py",
             "console": "integratedTerminal",
-            "args": ["--arch", "resnet18", "--exp-name", "exp1", "--exp-mode","pretrain","--configs","configs/configs.yml",
+            "args": ["--arch", "resnet18", "--exp-name", "test_rocl1", "--exp-mode","pretrain","--configs","configs/configs.yml",
                    "--trainer","adv","--val_method","adv","--k","1.0","--epochs","1","--batch-size","32","--test-batch-size","32",
-                   "--source-net", "trained_models/ckpt1", "--save-dense"
+                   "--source-net", "trained_models/rocl_ckpt_300epoch", "--save-dense", "--load_RoCL", "complete"
+                //    "--black_box_eval"
                 ]
         }
     ]

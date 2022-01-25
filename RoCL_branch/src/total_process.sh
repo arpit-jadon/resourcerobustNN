@@ -17,10 +17,10 @@ echo "CUDA ./total_process.sh test ../checkpoint/ name model learning rate"
 
 if [ "$1" == "test" ]; then
 	
-	python -m torch.distributed.launch --nproc_per_node=1 linear_eval.py --ngpu 1 --batch-size=1024 --train_type='linear_eval' --model=$4 --epoch 150 --lr $5 --name $3 --load_checkpoint=$2 --clean=True --dataset=$6 --seed=$7
+#	python -m torch.distributed.launch --nproc_per_node=1 linear_eval.py --ngpu 1 --batch-size=1024 --train_type='linear_eval' --model=$4 --epoch 150 --lr $5 --name $3 --load_checkpoint=$2 --clean=True --dataset=$6 --seed=$7
 	
-#	python -m torch.distributed.launch --nproc_per_node=1 robustness_test.py --ngpu 1 --train_type='linear_eval' --name=$3 --batch-size=1024 --model=$4 --#load_checkpoint='ckpt.t7'$3'_Evaluate_linear_eval_ResNet18_'$6'_'$7 --attack_type='linf' --epsilon=0.0314 --alpha=0.00314 --k=20 --dataset=$6 --seed=$7
-#        python -m torch.distributed.launch --nproc_per_node=1 robustness_test.py --ngpu 1 --train_type='linear_eval' --name=$3 --batch-size=1024 --model=$4 --#load_checkpoint='ckpt.t7'$3'_Evaluate_linear_eval_ResNet18_'$6'_'$7 --attack_type='linf' --epsilon=0.0627 --alpha=0.00627 --k=20 --dataset=$6 --seed=$7
+	python -m torch.distributed.launch --nproc_per_node=1 robustness_test.py --ngpu 1 --train_type='linear_eval' --name=$3 --batch-size=1024 --model=$4 --load_checkpoint='ckpt.t7'$3'_Evaluate_linear_eval_ResNet18_'$6'_'$7 --attack_type='linf' --epsilon=0.0314 --alpha=0.00314 --k=20 --dataset=$6 --seed=$7
+        python -m torch.distributed.launch --nproc_per_node=1 robustness_test.py --ngpu 1 --train_type='linear_eval' --name=$3 --batch-size=1024 --model=$4 --load_checkpoint='ckpt.t7'$3'_Evaluate_linear_eval_ResNet18_'$6'_'$7 --attack_type='linf' --epsilon=0.0627 --alpha=0.00627 --k=20 --dataset=$6 --seed=$7
 
 elif [ "$1" == "advtest" ]; then
 	python -m torch.distributed.launch --nproc_per_node=1 linear_eval.py --ngpu 1 --batch-size=1024 --train_type='linear_eval' --model=$4 --epoch 150 --lr $5 --name $3 --load_checkpoint=$2 --adv_img=True
