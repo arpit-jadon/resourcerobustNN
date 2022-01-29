@@ -1,0 +1,437 @@
+Matplotlib created a temporary config/cache directory at /raid/condor/lib/condor/execute/dir_2573872/matplotlib-3i35unay because the default path (/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Namespace(arch='resnet18', batch_size=256, beta=6.0, black_box_eval=False, black_box_path='../cifar10_pgd.pt', clip_max=1, clip_min=0, configs='configs/configs.yml', const_init=False, data_dir='./datasets', data_fraction=1.0, dataset='CIFAR10', distance='l_inf', epochs=3, epsilon=0.031, evaluate=False, exp_mode='pretrain', exp_name='rocl_complete_adv', freeze_bn=False, gpu='0', image_dim=32, init_type='kaiming_normal', is_semisup=False, k=1.0, layer_type='subnet', load_RoCL='complete', lr=0.1, lr_schedule='cosine', mean=(0, 0, 0), mixtraink=1, momentum=0.9, n_repeats=4, no_cuda=False, noise_std=0.25, normalize=False, num_classes=10, num_steps=10, optimizer='sgd', print_freq=100, result_dir='./trained_models', resume='', save_dense=True, scale_rand_init=False, scaled_score_init=False, schedule_length=0, scores_init_type=None, seed=1234, semisup_data='tinyimages', semisup_fraction=1.0, snip_init=False, source_net='./trained_models/rocl_ckpt_same_attack', start_epoch=0, std=(1, 1, 1), step_size=0.0078, test_batch_size=256, trainer='adv', val_method='adv', warmup_epochs=0, warmup_lr=0.1, wd=0.0001)
+ResNet(
+  (conv1): SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): SubnetLinear(in_features=512, out_features=10, bias=True)
+)
+Dataset:CIFAR10, D:<data.cifar.CIFAR10 object at 0x7f9d0bc7b0d0>, train len:50000, test len:10000
+[CrossEntropyLoss(), SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 0.1
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0001
+), <function cosine_schedule.<locals>.set_lr at 0x7f9d0bbabdc0>]
+=> loading source model from './trained_models/rocl_ckpt_same_attack'
+=> loaded checkpoint './trained_models/rocl_ckpt_same_attack'
+/opt/conda/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Epoch 0, val-method adv, validation accuracy 37.14999771118164, best_prec 37.14999771118164
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 1, val-method adv, validation accuracy 40.66999816894531, best_prec 40.66999816894531
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Epoch 2, val-method adv, validation accuracy 42.30999755859375, best_prec 42.30999755859375
+Sanity check (exp-mode: pretrain): Weight update - True, Scores update - False
+Matplotlib created a temporary config/cache directory at /raid/condor/lib/condor/execute/dir_2573872/matplotlib-sa1e3d2s because the default path (/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Namespace(arch='resnet18', batch_size=256, beta=6.0, black_box_eval=False, black_box_path='../cifar10_pgd.pt', clip_max=1, clip_min=0, configs='configs/configs.yml', const_init=False, data_dir='./datasets', data_fraction=1.0, dataset='CIFAR10', distance='l_inf', epochs=25, epsilon=0.031, evaluate=False, exp_mode='prune', exp_name='rocl_complete_adv', freeze_bn=False, gpu='0', image_dim=32, init_type='kaiming_normal', is_semisup=False, k=0.1, layer_type='subnet', load_RoCL='unused', lr=0.1, lr_schedule='cosine', mean=(0, 0, 0), mixtraink=1, momentum=0.9, n_repeats=4, no_cuda=False, noise_std=0.25, normalize=False, num_classes=10, num_steps=10, optimizer='sgd', print_freq=100, result_dir='./trained_models', resume='', save_dense=True, scale_rand_init=False, scaled_score_init=True, schedule_length=0, scores_init_type=None, seed=1234, semisup_data='tinyimages', semisup_fraction=1.0, snip_init=False, source_net='./trained_models/rocl_complete_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar', start_epoch=0, std=(1, 1, 1), step_size=0.0078, test_batch_size=256, trainer='adv', val_method='adv', warmup_epochs=0, warmup_lr=0.1, wd=0.0001)
+ResNet(
+  (conv1): SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): SubnetLinear(in_features=512, out_features=10, bias=True)
+)
+Dataset:CIFAR10, D:<data.cifar.CIFAR10 object at 0x7fd5baea83a0>, train len:50000, test len:10000
+[CrossEntropyLoss(), SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 0.1
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0001
+), <function cosine_schedule.<locals>.set_lr at 0x7fd5baeacdc0>]
+=> loading source model from './trained_models/rocl_complete_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar'
+=> loaded checkpoint './trained_models/rocl_complete_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar'
+Validation accuracy adv for source-net: 7.359999656677246
+/opt/conda/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Epoch 0, val-method adv, validation accuracy 37.040000915527344, best_prec 37.040000915527344
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 1, val-method adv, validation accuracy 36.75, best_prec 37.040000915527344
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 2, val-method adv, validation accuracy 38.95000076293945, best_prec 38.95000076293945
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 3, val-method adv, validation accuracy 41.43000030517578, best_prec 41.43000030517578
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 4, val-method adv, validation accuracy 42.279998779296875, best_prec 42.279998779296875
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 5, val-method adv, validation accuracy 42.55999755859375, best_prec 42.55999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 6, val-method adv, validation accuracy 39.369998931884766, best_prec 42.55999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 7, val-method adv, validation accuracy 41.599998474121094, best_prec 42.55999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 8, val-method adv, validation accuracy 41.96999740600586, best_prec 42.55999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 9, val-method adv, validation accuracy 42.48999786376953, best_prec 42.55999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 10, val-method adv, validation accuracy 43.459999084472656, best_prec 43.459999084472656
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 11, val-method adv, validation accuracy 43.70000076293945, best_prec 43.70000076293945
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 12, val-method adv, validation accuracy 44.52000045776367, best_prec 44.52000045776367
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 13, val-method adv, validation accuracy 44.81999969482422, best_prec 44.81999969482422
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 14, val-method adv, validation accuracy 43.959999084472656, best_prec 44.81999969482422
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 15, val-method adv, validation accuracy 45.189998626708984, best_prec 45.189998626708984
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 16, val-method adv, validation accuracy 45.279998779296875, best_prec 45.279998779296875
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 17, val-method adv, validation accuracy 44.38999938964844, best_prec 45.279998779296875
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 18, val-method adv, validation accuracy 45.43000030517578, best_prec 45.43000030517578
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 19, val-method adv, validation accuracy 45.37999725341797, best_prec 45.43000030517578
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 20, val-method adv, validation accuracy 44.48999786376953, best_prec 45.43000030517578
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 21, val-method adv, validation accuracy 45.68000030517578, best_prec 45.68000030517578
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 22, val-method adv, validation accuracy 45.37999725341797, best_prec 45.68000030517578
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 23, val-method adv, validation accuracy 45.62999725341797, best_prec 45.68000030517578
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Epoch 24, val-method adv, validation accuracy 46.119998931884766, best_prec 46.119998931884766
+Pruned model: 90.00%
+Sanity check (exp-mode: prune): Weight update - False, Scores update - True
+Matplotlib created a temporary config/cache directory at /raid/condor/lib/condor/execute/dir_2573872/matplotlib-9p0s7_5s because the default path (/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Namespace(arch='resnet18', batch_size=256, beta=6.0, black_box_eval=False, black_box_path='../cifar10_pgd.pt', clip_max=1, clip_min=0, configs='configs/configs.yml', const_init=False, data_dir='./datasets', data_fraction=1.0, dataset='CIFAR10', distance='l_inf', epochs=25, epsilon=0.031, evaluate=False, exp_mode='finetune', exp_name='rocl_complete_adv', freeze_bn=False, gpu='0', image_dim=32, init_type='kaiming_normal', is_semisup=False, k=0.1, layer_type='subnet', load_RoCL='unused', lr=0.01, lr_schedule='cosine', mean=(0, 0, 0), mixtraink=1, momentum=0.9, n_repeats=4, no_cuda=False, noise_std=0.25, normalize=False, num_classes=10, num_steps=10, optimizer='sgd', print_freq=100, result_dir='./trained_models', resume='', save_dense=True, scale_rand_init=False, scaled_score_init=False, schedule_length=0, scores_init_type=None, seed=1234, semisup_data='tinyimages', semisup_fraction=1.0, snip_init=False, source_net='./trained_models/rocl_complete_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar', start_epoch=0, std=(1, 1, 1), step_size=0.0078, test_batch_size=256, trainer='adv', val_method='adv', warmup_epochs=0, warmup_lr=0.1, wd=0.0001)
+ResNet(
+  (conv1): SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): SubnetConv(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SubnetConv(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): SubnetLinear(in_features=512, out_features=10, bias=True)
+)
+Dataset:CIFAR10, D:<data.cifar.CIFAR10 object at 0x7f1f65b7b3a0>, train len:50000, test len:10000
+[CrossEntropyLoss(), SGD (
+Parameter Group 0
+    dampening: 0
+    lr: 0.01
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0001
+), <function cosine_schedule.<locals>.set_lr at 0x7f1f65b7edc0>]
+=> loading source model from './trained_models/rocl_complete_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar'
+=> loaded checkpoint './trained_models/rocl_complete_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar'
+Validation accuracy adv for source-net: 46.15999984741211
+/opt/conda/lib/python3.8/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Epoch 0, val-method adv, validation accuracy 47.14999771118164, best_prec 47.14999771118164
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 1, val-method adv, validation accuracy 46.77000045776367, best_prec 47.14999771118164
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 2, val-method adv, validation accuracy 46.81999969482422, best_prec 47.14999771118164
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 3, val-method adv, validation accuracy 46.84000015258789, best_prec 47.14999771118164
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 4, val-method adv, validation accuracy 46.53999710083008, best_prec 47.14999771118164
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 5, val-method adv, validation accuracy 46.959999084472656, best_prec 47.14999771118164
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 6, val-method adv, validation accuracy 46.72999954223633, best_prec 47.14999771118164
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 7, val-method adv, validation accuracy 47.16999816894531, best_prec 47.16999816894531
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 8, val-method adv, validation accuracy 46.81999969482422, best_prec 47.16999816894531
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 9, val-method adv, validation accuracy 47.0, best_prec 47.16999816894531
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 10, val-method adv, validation accuracy 46.93000030517578, best_prec 47.16999816894531
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 11, val-method adv, validation accuracy 46.96999740600586, best_prec 47.16999816894531
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 12, val-method adv, validation accuracy 47.06999969482422, best_prec 47.16999816894531
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 13, val-method adv, validation accuracy 47.27000045776367, best_prec 47.27000045776367
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 14, val-method adv, validation accuracy 47.099998474121094, best_prec 47.27000045776367
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 15, val-method adv, validation accuracy 47.07999801635742, best_prec 47.27000045776367
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 16, val-method adv, validation accuracy 47.30999755859375, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 17, val-method adv, validation accuracy 47.06999969482422, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 18, val-method adv, validation accuracy 47.21999740600586, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 19, val-method adv, validation accuracy 47.22999954223633, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 20, val-method adv, validation accuracy 47.06999969482422, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 21, val-method adv, validation accuracy 47.25, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 22, val-method adv, validation accuracy 46.94999694824219, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 23, val-method adv, validation accuracy 47.14999771118164, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False
+Epoch 24, val-method adv, validation accuracy 47.11000061035156, best_prec 47.30999755859375
+Pruned model: 90.00%
+Sanity check (exp-mode: finetune): Weight update - True, Scores update - False

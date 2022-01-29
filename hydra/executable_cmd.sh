@@ -15,16 +15,16 @@ SKIP
 SKIP
 
 python train.py --arch resnet18 --exp-mode pretrain --configs configs/configs.yml\
-    --trainer adv --val_method adv --k 1.0  --epochs 25 --save-dense --exp-name rocl_ext_adv\
-    --source-net ./trained_models/rocl_ckpt_300epoch --load_RoCL extractor
+    --trainer adv --val_method adv --k 1.0  --epochs 3 --save-dense --exp-name rocl_complete_adv\
+    --source-net ./trained_models/rocl_ckpt_same_attack --load_RoCL complete
 
 python train.py --arch resnet18 --exp-mode prune --configs configs/configs.yml\
-    --trainer adv --val_method adv --k 0.1 --scaled-score-init --exp-name rocl_ext_adv\
-    --source-net ./trained_models/rocl_ext_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar --epochs 25 --save-dense
+    --trainer adv --val_method adv --k 0.1 --scaled-score-init --exp-name rocl_complete_adv\
+    --source-net ./trained_models/rocl_complete_adv/pretrain/latest_exp/checkpoint/checkpoint.pth.tar --epochs 25 --save-dense
 
 python train.py --arch resnet18 --exp-mode finetune --configs configs/configs.yml\
-    --trainer adv --val_method adv --k 0.1 --source-net ./trained_models/rocl_ext_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar\
-    --save-dense --lr 0.01 --epochs 25 --exp-name rocl_ext_adv
+    --trainer adv --val_method adv --k 0.1 --source-net ./trained_models/rocl_complete_adv/prune/latest_exp/checkpoint/checkpoint.pth.tar\
+    --save-dense --lr 0.01 --epochs 25 --exp-name rocl_complete_adv
 
 << skip
 python train.py --arch resnet18 --exp-mode pretrain --configs configs/configs.yml\

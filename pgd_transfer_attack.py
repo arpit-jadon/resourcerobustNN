@@ -3,8 +3,9 @@ import argparse
 from tqdm import tqdm
 from torchvision.datasets import CIFAR10
 from torch.utils.data import DataLoader, TensorDataset 
-from pytorchcv.model_provider import get_model as ptcv_get_model
-from torchattacks import PGD
+# TODO: install following packages in Docker (update requirements.txt)
+# from pytorchcv.model_provider import get_model as ptcv_get_model 
+# from torchattacks import PGD
 import torchvision.transforms as transform
 
 #  clean: 89.15% & robust: 0.05% of base ResNet-20 on CIFAR-10 dataset

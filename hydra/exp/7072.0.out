@@ -1,0 +1,143 @@
+=> Reading YAML config from configs/configs.yml
+#################### Pre-training network ####################
+===>>  gradient for importance_scores: None  | training weights only
+Initialization relevance score with None initialization
+Files already downloaded and verified
+Files already downloaded and verified
+Traing loader: 50000 images, Test loader: 10000 images
+Missing in RoCL, total=23, {'layer1.1.conv1.popup_scores', 'layer2.1.conv1.popup_scores', 'layer3.1.conv1.popup_scores', 'layer3.0.shortcut.0.popup_scores', 'layer2.0.shortcut.0.popup_scores', 'linear.bias', 'layer1.0.conv2.popup_scores', 'layer3.1.conv2.popup_scores', 'linear.popup_scores', 'conv1.popup_scores', 'layer1.0.conv1.popup_scores', 'linear.weight', 'layer2.0.conv1.popup_scores', 'layer1.1.conv2.popup_scores', 'layer3.0.conv1.popup_scores', 'layer2.0.conv2.popup_scores', 'layer4.0.conv1.popup_scores', 'layer2.1.conv2.popup_scores', 'layer4.1.conv2.popup_scores', 'layer4.1.conv1.popup_scores', 'layer3.0.conv2.popup_scores', 'layer4.0.conv2.popup_scores', 'layer4.0.shortcut.0.popup_scores'}
+Loaded linear classifier layer !!
+variable = conv1.weight, Gradient requires_grad = True
+variable = conv1.popup_scores, Gradient requires_grad = False
+variable = bn1.weight, Gradient requires_grad = True
+variable = bn1.bias, Gradient requires_grad = True
+variable = layer1.0.conv1.weight, Gradient requires_grad = True
+variable = layer1.0.conv1.popup_scores, Gradient requires_grad = False
+variable = layer1.0.bn1.weight, Gradient requires_grad = True
+variable = layer1.0.bn1.bias, Gradient requires_grad = True
+variable = layer1.0.conv2.weight, Gradient requires_grad = True
+variable = layer1.0.conv2.popup_scores, Gradient requires_grad = False
+variable = layer1.0.bn2.weight, Gradient requires_grad = True
+variable = layer1.0.bn2.bias, Gradient requires_grad = True
+variable = layer1.1.conv1.weight, Gradient requires_grad = True
+variable = layer1.1.conv1.popup_scores, Gradient requires_grad = False
+variable = layer1.1.bn1.weight, Gradient requires_grad = True
+variable = layer1.1.bn1.bias, Gradient requires_grad = True
+variable = layer1.1.conv2.weight, Gradient requires_grad = True
+variable = layer1.1.conv2.popup_scores, Gradient requires_grad = False
+variable = layer1.1.bn2.weight, Gradient requires_grad = True
+variable = layer1.1.bn2.bias, Gradient requires_grad = True
+variable = layer2.0.conv1.weight, Gradient requires_grad = True
+variable = layer2.0.conv1.popup_scores, Gradient requires_grad = False
+variable = layer2.0.bn1.weight, Gradient requires_grad = True
+variable = layer2.0.bn1.bias, Gradient requires_grad = True
+variable = layer2.0.conv2.weight, Gradient requires_grad = True
+variable = layer2.0.conv2.popup_scores, Gradient requires_grad = False
+variable = layer2.0.bn2.weight, Gradient requires_grad = True
+variable = layer2.0.bn2.bias, Gradient requires_grad = True
+variable = layer2.0.shortcut.0.weight, Gradient requires_grad = True
+variable = layer2.0.shortcut.0.popup_scores, Gradient requires_grad = False
+variable = layer2.0.shortcut.1.weight, Gradient requires_grad = True
+variable = layer2.0.shortcut.1.bias, Gradient requires_grad = True
+variable = layer2.1.conv1.weight, Gradient requires_grad = True
+variable = layer2.1.conv1.popup_scores, Gradient requires_grad = False
+variable = layer2.1.bn1.weight, Gradient requires_grad = True
+variable = layer2.1.bn1.bias, Gradient requires_grad = True
+variable = layer2.1.conv2.weight, Gradient requires_grad = True
+variable = layer2.1.conv2.popup_scores, Gradient requires_grad = False
+variable = layer2.1.bn2.weight, Gradient requires_grad = True
+variable = layer2.1.bn2.bias, Gradient requires_grad = True
+variable = layer3.0.conv1.weight, Gradient requires_grad = True
+variable = layer3.0.conv1.popup_scores, Gradient requires_grad = False
+variable = layer3.0.bn1.weight, Gradient requires_grad = True
+variable = layer3.0.bn1.bias, Gradient requires_grad = True
+variable = layer3.0.conv2.weight, Gradient requires_grad = True
+variable = layer3.0.conv2.popup_scores, Gradient requires_grad = False
+variable = layer3.0.bn2.weight, Gradient requires_grad = True
+variable = layer3.0.bn2.bias, Gradient requires_grad = True
+variable = layer3.0.shortcut.0.weight, Gradient requires_grad = True
+variable = layer3.0.shortcut.0.popup_scores, Gradient requires_grad = False
+variable = layer3.0.shortcut.1.weight, Gradient requires_grad = True
+variable = layer3.0.shortcut.1.bias, Gradient requires_grad = True
+variable = layer3.1.conv1.weight, Gradient requires_grad = True
+variable = layer3.1.conv1.popup_scores, Gradient requires_grad = False
+variable = layer3.1.bn1.weight, Gradient requires_grad = True
+variable = layer3.1.bn1.bias, Gradient requires_grad = True
+variable = layer3.1.conv2.weight, Gradient requires_grad = True
+variable = layer3.1.conv2.popup_scores, Gradient requires_grad = False
+variable = layer3.1.bn2.weight, Gradient requires_grad = True
+variable = layer3.1.bn2.bias, Gradient requires_grad = True
+variable = layer4.0.conv1.weight, Gradient requires_grad = True
+variable = layer4.0.conv1.popup_scores, Gradient requires_grad = False
+variable = layer4.0.bn1.weight, Gradient requires_grad = True
+variable = layer4.0.bn1.bias, Gradient requires_grad = True
+variable = layer4.0.conv2.weight, Gradient requires_grad = True
+variable = layer4.0.conv2.popup_scores, Gradient requires_grad = False
+variable = layer4.0.bn2.weight, Gradient requires_grad = True
+variable = layer4.0.bn2.bias, Gradient requires_grad = True
+variable = layer4.0.shortcut.0.weight, Gradient requires_grad = True
+variable = layer4.0.shortcut.0.popup_scores, Gradient requires_grad = False
+variable = layer4.0.shortcut.1.weight, Gradient requires_grad = True
+variable = layer4.0.shortcut.1.bias, Gradient requires_grad = True
+variable = layer4.1.conv1.weight, Gradient requires_grad = True
+variable = layer4.1.conv1.popup_scores, Gradient requires_grad = False
+variable = layer4.1.bn1.weight, Gradient requires_grad = True
+variable = layer4.1.bn1.bias, Gradient requires_grad = True
+variable = layer4.1.conv2.weight, Gradient requires_grad = True
+variable = layer4.1.conv2.popup_scores, Gradient requires_grad = False
+variable = layer4.1.bn2.weight, Gradient requires_grad = True
+variable = layer4.1.bn2.bias, Gradient requires_grad = True
+variable = linear.weight, Gradient requires_grad = True
+variable = linear.bias, Gradient requires_grad = True
+variable = linear.popup_scores, Gradient requires_grad = False
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.09045
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [0][  0/196]	Time  3.735 ( 3.735)	Data  0.000 ( 0.000)	Loss 4.1573 (4.1573)	Acc_1  53.52 ( 53.52)	Acc_5  95.31 ( 95.31)
+Epoch: [0][100/196]	Time  3.672 ( 3.674)	Data  0.000 ( 0.000)	Loss 1.6933 (1.9090)	Acc_1  54.30 ( 49.82)	Acc_5  94.53 ( 92.12)
+Test: [39/40]	Time  0.533 ( 2.293)	Loss 0.9692 (1.1972)	Adv_Loss 1.3779 (1.6726)	Acc_1  75.00 ( 61.66)	Acc_5 100.00 ( 96.19)	Adv-Acc_1  37.50 ( 37.71)	Adv-Acc_5 100.00 ( 87.57)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.10000
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [1][  0/196]	Time  3.470 ( 3.470)	Data  0.000 ( 0.000)	Loss 1.5488 (1.5488)	Acc_1  61.33 ( 61.33)	Acc_5  96.48 ( 96.48)
+Epoch: [1][100/196]	Time  3.675 ( 3.672)	Data  0.000 ( 0.000)	Loss 1.4632 (1.5105)	Acc_1  67.58 ( 64.09)	Acc_5  96.48 ( 96.40)
+Test: [39/40]	Time  0.545 ( 2.307)	Loss 0.9351 (1.1256)	Adv_Loss 1.3520 (1.5836)	Acc_1  81.25 ( 67.32)	Acc_5 100.00 ( 97.19)	Adv-Acc_1  25.00 ( 40.76)	Adv-Acc_5 100.00 ( 89.85)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.09045
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [2][  0/196]	Time  3.468 ( 3.468)	Data  0.000 ( 0.000)	Loss 1.3933 (1.3933)	Acc_1  69.92 ( 69.92)	Acc_5  98.05 ( 98.05)
+Epoch: [2][100/196]	Time  3.671 ( 3.671)	Data  0.000 ( 0.000)	Loss 1.5365 (1.4404)	Acc_1  62.89 ( 67.49)	Acc_5  95.31 ( 97.20)
+Test: [39/40]	Time  0.528 ( 2.293)	Loss 0.8995 (1.0812)	Adv_Loss 1.3024 (1.5448)	Acc_1  87.50 ( 68.45)	Acc_5 100.00 ( 97.31)	Adv-Acc_1  37.50 ( 42.40)	Adv-Acc_5 100.00 ( 89.87)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.06545
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [3][  0/196]	Time  3.429 ( 3.429)	Data  0.000 ( 0.000)	Loss 1.3928 (1.3928)	Acc_1  68.36 ( 68.36)	Acc_5  97.27 ( 97.27)
+Epoch: [3][100/196]	Time  3.671 ( 3.671)	Data  0.000 ( 0.000)	Loss 1.4057 (1.4067)	Acc_1  71.48 ( 69.62)	Acc_5  96.48 ( 97.31)
+Test: [39/40]	Time  0.527 ( 2.293)	Loss 0.8583 (1.0431)	Adv_Loss 1.2684 (1.5160)	Acc_1  87.50 ( 71.59)	Acc_5 100.00 ( 97.94)	Adv-Acc_1  43.75 ( 42.96)	Adv-Acc_5 100.00 ( 90.76)
+ ->->->->->->->->->-> One epoch with Adversarial training (TRADES) <-<-<-<-<-<-<-<-<-<-
+torch.Size([256, 3, 32, 32]) torch.Size([256]) Batch_size from args: 256 lr: 0.03455
+Training images range: [tensor(0., device='cuda:0'), tensor(1., device='cuda:0')]
+Epoch: [4][  0/196]	Time  3.479 ( 3.479)	Data  0.000 ( 0.000)	Loss 1.4218 (1.4218)	Acc_1  64.84 ( 64.84)	Acc_5  96.88 ( 96.88)
+Epoch: [4][100/196]	Time  3.670 ( 3.672)	Data  0.000 ( 0.000)	Loss 1.3730 (1.3851)	Acc_1  71.48 ( 70.49)	Acc_5  97.27 ( 97.58)
+Test: [39/40]	Time  0.527 ( 2.292)	Loss 0.9245 (1.0456)	Adv_Loss 1.3527 (1.5146)	Acc_1  81.25 ( 71.21)	Acc_5 100.00 ( 97.93)	Adv-Acc_1  31.25 ( 43.67)	Adv-Acc_5  93.75 ( 91.03)
+conv1 SubnetConv(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer1.0.conv1 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer1.0.conv2 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer1.1.conv1 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer1.1.conv2 SubnetConv(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer2.0.conv1 SubnetConv(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False) 0.0
+layer2.0.conv2 SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer2.0.shortcut.0 SubnetConv(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False) 0.0
+layer2.1.conv1 SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer2.1.conv2 SubnetConv(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer3.0.conv1 SubnetConv(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False) 0.0
+layer3.0.conv2 SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer3.0.shortcut.0 SubnetConv(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False) 0.0
+layer3.1.conv1 SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer3.1.conv2 SubnetConv(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer4.0.conv1 SubnetConv(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False) 0.0
+layer4.0.conv2 SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer4.0.shortcut.0 SubnetConv(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False) 0.0
+layer4.1.conv1 SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+layer4.1.conv2 SubnetConv(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False) 0.0
+linear SubnetLinear(in_features=512, out_features=10, bias=True) 0.0

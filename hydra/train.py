@@ -48,7 +48,8 @@ parent = os.path.dirname(current)
 # adding the parent directory to # the sys.path.
 sys.path.append(parent)
 
-from pgd_transfer_attack import black_box_eval
+# FIXME: cannot import
+# from pgd_transfer_attack import black_box_eval 
 
 
 # TODO: update wrn, resnet models. Save both subnet and dense version.
