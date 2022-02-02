@@ -49,7 +49,7 @@ parent = os.path.dirname(current)
 sys.path.append(parent)
 
 # FIXME: cannot import
-# from pgd_transfer_attack import black_box_eval 
+from pgd_transfer_attack import black_box_eval 
 
 
 # TODO: update wrn, resnet models. Save both subnet and dense version.
@@ -219,12 +219,6 @@ def main():
     if args.scale_rand_init:
         scale_rand_init(model, args.k)
 
-    # Scaled random initialization. Useful when training a high sparse net from scratch.
-    # If not used, a sparse net (without batch-norm) from scratch will not coverge.
-    # With batch-norm its not really necessary.
-    if args.scale_rand_init:
-        scale_rand_init(model, args.k)
-
     if args.snip_init:
         snip_init(model, criterion, optimizer, train_loader, device, args)
 
@@ -254,7 +248,7 @@ def main():
             logger.info("=> no checkpoint found at '{}'".format(args.resume))
 
     # Evaluate
-    if args.evaluate or args.exp_mode in ["prune", "finetune"]:
+    if (args.evaluate or args.exp_mode in ["prune", "finetune"]) and not args.black_box_eval:
         p1, _ = val(model, device, test_loader, criterion, args, writer)
         logger.info(f"Validation accuracy {args.val_method} for source-net: {p1}")
         if args.evaluate:
@@ -270,7 +264,7 @@ def main():
         last_ckpt = copy.deepcopy(model.state_dict())
 
     if args.black_box_eval:
-        black_box_eval(model, args.black_box_path, args.batch_size)
+        black_box_eval(model, args.black_box_path, args.test_batch_size)
         exit()
 
     # Start training
