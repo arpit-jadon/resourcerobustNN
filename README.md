@@ -64,6 +64,16 @@ There three parts (steps) in HYDRA method. We have to uncomment and run each par
 2. Update `docker.sub` according to the requirements.
 3. Run: `condor_submit docker.sub` (include `-i` flag for interactive mode) 
 
+### Using RoCL adversarial trained weights
+1. Include flags `--load_RoCL` with option of parameter `complete` to use with linear layer and parameter `extractor` to use without linear layer.
+2. Specify the checkpoint path, e.g. `--source-net ./trained_models/rocl_ckpt_same_attack`.
+3. Execute code.
+
+### Black box attack
+1. Specify the checkpoint path, e.g. ` --source-net ./trained_models/rocl_ext_adv_base/finetune/latest_exp/checkpoint/checkpoint.pth.tar`.
+2. Use the flag ` --black_box_eval`.
+3. Execute code/experiment.
+
 ## Transfer attack
 We create adversarial examples with PGD white-box attack with ResNet-20 auxiliar model. This attack will be considered as black-box attack on HYDRA models.
 
@@ -71,3 +81,6 @@ Create test data using below:
 ```
 python pgd_transfer_attack.py
 ```
+
+## Experiment results
+You can find all results logs in `exp/` directory.

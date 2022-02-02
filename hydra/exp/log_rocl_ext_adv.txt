@@ -89,4 +89,4 @@ variable = linear.weight, Gradient requires_grad = True
 variable = linear.bias, Gradient requires_grad = True
 variable = linear.popup_scores, Gradient requires_grad = False
 Adversarial examples ready !!
-Robust (Black box) accuracy: 11.80%
+Robust (Black box) accuracy: 18.80%
