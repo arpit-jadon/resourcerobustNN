@@ -33,16 +33,6 @@ To evaluate my model linear evaluation and robustness, run:
 ./total_process.sh test <checkpoint-load> <name> <model type='ResNet18' or 'ResNet50'> <learning rate=0.1> <dataset='cifar-10' or 'cifar-100'>
 ```
 
-## Results
-
-Our model achieves the following performance on :
-
-### Classification and robustness on CIFAR 10
-
-| Model name         |    Accuracy     |   robustness   |
-| ------------------ |---------------- | -------------- |
-| RoCL ResNet18      |    83.71 %      |     40.27%     |
-
 
 ## Citation
 ```
