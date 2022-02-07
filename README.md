@@ -1,4 +1,38 @@
-# Project_MLCysec
+# Making Neural Networks Robust in Resource Constrained Settings
+
+In this work, we proposed a solution to achieve a robust and compact model that can be deployed in a resource-
+constrained environment. In all 4 steps of our approach, we include natural (on clean samples) and robust (on adversarial samples) training loss for parameter optimization. To boost the robustness, we utilize robust contrastive learning and transfer the weights to initialize our model before supervised learning. We learn the pruning mask by incorporating importance scores in the robust objective function, using which we are able to preserve the robustness. We compare our method with strong baselines and their variants for thorough study. Because of our elegant 4 step method, solving different resource-constraint problems at each stage, we achieve best performance throughout all our experiments. We test our method with different pruning ratios, i.e., 0% after supervised training stage, 90% and, 99% and our method outperforms others at every stage. Moreover, with different types of attacks, i.e., white-box (PGD) and black-box, our observations remain consistent. With extensive experiments and solid reasoning of our method, we have established strong dominance over baseline and
+variants, providing a reliable method for deployment.
+
+## Overview of the method
+![img](images/Model_Overview.JPG)
+
+We perform the following: <br/>
+(1) Pre-training using Self-Supervised Robust Contrastive loss. <br/>
+(2) Supervised adversarial training using Adversarial Loss. <br/>
+(3) Set importance scores for each of the trained layers. <br/>
+(4) Perform pruning using a pruning loss and finally adversarial fine-tuning of pruned weights.
+
+## Results
+
+### Final accuracy (clean and robust) scores of our method against baselines on the CIFAR-10 dataset.
+| Method                         | Clean Acc(\%) | Robust Acc(\%) |
+|--------------------------------|---------------|----------------|
+| Baseline 1-RoCL (Not pruned)   | 77.85         | 31.45          |
+| Baseline 2-HYDRA (90\% Pruned) | 69.84         | 41.74          |
+| Our method (90\%Pruned)        | 76.66         | **48.68**      |
+
+
+### Black box attack performance
+| Method                        | Robust Acc(\%) |
+|-------------------------------|----------------|
+| Baseline 2 (w/o adv training) | 10.01          |
+| Baseline 2                    | 16.83          |
+| Our method (w/o adv training) | 13.08          |
+| Baseline 1 + Baseline 2       | 17.99          |
+| Our method                    | **18.80**      |
+
+**You can more detailed results in our [report](https://drive.google.com/file/d/1RWaGpMLMrfauIsgzrBdCfULZ9BIJlSN8/view?usp=sharing)**.
 
 ## Creating Docker
 
